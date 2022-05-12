@@ -308,7 +308,7 @@ html_static_path = ['_static']
 
 # using the given strftime format.
 
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 
 
