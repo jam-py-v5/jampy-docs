@@ -59,7 +59,7 @@ Click the "OK" button to save the "Contacts" item.
 As you can see, there are no "FIRSTNAME" and "PHONE" fields in the "CRM_CONTACTS" 
 table. This is due to the fact that we have set **Master field** attribute of these 
 fields to "Customer". The "Customer" field will store a reference to a record in the
-"Customers" catalog and that record have the "Fisrtname" and "Phone" fields.
+"Customers" catalog and that record have the "Firstname" and "Phone" fields.
 
 When we refresh the project page and click the **New** button we'll see that 
 there is a small button to the right of the "Customer" input. 
