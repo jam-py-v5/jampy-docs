@@ -17,3 +17,5 @@ Jam.py documentation contents
     admin/index
     refs/index
     releases/index
+
+    jampy-design-doco/contents
