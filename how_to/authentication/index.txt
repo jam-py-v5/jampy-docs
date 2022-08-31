@@ -7,7 +7,7 @@ In the Jam.py repository there is the "Authentication" project
 file.
 This project demonstrates the first three topics of this section. 
 
-http://jam-py.com/repository/auth.zip
+https://jam-py.com/repository/auth.zip
 
 You can download it, create a new project and 
 :doc:`import </admin/project/import>`
