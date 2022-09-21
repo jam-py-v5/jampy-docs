@@ -2,11 +2,11 @@
 How to save changes to two tables in same transaction on the server 
 ====================================================================
 
-Below is two examples. 
+Below are two examples. 
 
 In the first example each 
 :doc:`apply </refs/server/item/m_apply>`
-method gets its own connection from connection pool and commits it after saveing
+method gets its own connection from connection pool and commits it after saving
 changes to the database.
 
 In the second example the connection is received from connection pool and passed 
