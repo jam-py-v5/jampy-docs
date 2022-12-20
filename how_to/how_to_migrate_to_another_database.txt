@@ -58,7 +58,7 @@ To do this, follow these steps:
            });
          }
 
-     * or run from from debbuging console of the browser:
+     * or run from from debugging console of the browser:
     
        .. code-block:: js
 
