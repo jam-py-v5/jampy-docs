@@ -61,7 +61,8 @@ import shlex
 # ones.
 
 #extensions = ['sphinx_rtd_theme']
-
+extensions = ['sphinx_sitemap']
+html_baseurl = 'https://jampyapplicationbuilder.com/docs/'
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -354,7 +355,7 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # If true, links to the reST sources are added to the pages.
 
-#html_show_sourcelink = True
+html_show_sourcelink = False
 
 
 
