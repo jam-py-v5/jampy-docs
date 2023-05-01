@@ -50,6 +50,8 @@ comment out default location in /etc/nginx/sites-enabled/default (Linux Mint):
   		# as directory, then fall back to displaying a 404.
   #		try_files $uri $uri/ =404;
   #	}
+
+
 and add:
 
 .. code-block:: nginx
