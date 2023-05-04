@@ -14,7 +14,7 @@ Description
 ===========
 
 Occurs after changes to detail record has been posted. It uses the clearTimeout
-and setTimeout Javascript functions so if records have been changed in a cicle it
+and setTimeout Javascript functions so if records have been changed in a cycle it
 is triggered only when last record change occurs.
 
 The ``item`` parameter is an item that triggered the event.
