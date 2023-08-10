@@ -82,7 +82,7 @@ of failure 	an error message will be displayed.
     
     * to use **FireBird** database, the python ``fdb`` library must be installed 
     * **PostgreSQL** requires ``psycopg2`` library 
-    * **MySQL** requires ``MySQLdb`` library
+    * **MySQL** requires ``MySQLdb`` for Python 2.x or ``mysqlclient``  for Python 3.x 
     * **Oracle** requires ``cx_Oracle`` library     
     * **MSSQL** requires ``pymssql`` library
     * to generate reports **LibreOffice** must be installed
