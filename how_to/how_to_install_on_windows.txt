@@ -117,7 +117,7 @@ Common pitfalls
 
     ...\> python -m site --user-site
 
-  The output might be similar to below::
+  The output might be similar to the following::
 
     C:\Users\youruser\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages
 
@@ -128,7 +128,7 @@ Common pitfalls
     ...\> dir C:\Users\youruser\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts
 
 
-  The output might be similar to below::
+  The output might be similar to the following::
 
     ...\> Directory of C:\Users\yourser\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts
 
