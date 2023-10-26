@@ -41,10 +41,12 @@ when creating a new item.
 Now, to save the changes, click the **OK** button. When saving, the Application 
 builder created the ``CRM_CUSTOMERS`` table in the ``ctm.sqlite`` database:
 
+
 .. image:: /intro/_images/customer_sql.png
 	:align: left
 	:alt: Table created
-	
+
+
 Go to the Project page and make sure it is refreshed
 
 .. code-block:: console
