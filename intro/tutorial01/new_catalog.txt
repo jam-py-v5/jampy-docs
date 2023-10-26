@@ -43,7 +43,7 @@ builder created the ``CRM_CUSTOMERS`` table in the ``ctm.sqlite`` database:
 
 
 .. image:: /intro/_images/customer_sql.png
-	:align: left
+	:align: center
 	:alt: Table created
 
 
@@ -52,6 +52,8 @@ Go to the Project page and make sure it is refreshed
 .. code-block:: console
 
     127.0.0.1:8080
+
+
 
 Then, click the **New** button to create a new customer.
 Fill in the dialog, then click the **OK** button:
