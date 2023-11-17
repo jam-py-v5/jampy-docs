@@ -27,8 +27,12 @@ Jam.py classes APIs.
 :doc:`How to <how_to/index>` contains code examples that can be useful to quickly
 accomplish common tasks.
 
-Or you can go to the
-:doc:`table of contents <contents>`.
+Or visit the
+:doc:`table of contents <contents>` or even 
+
+`Jam.py Application Design Tips`_.
+
+.. _`Jam.py Application Design Tips`: https://jampyapplicationbuilder.com/tips/
 
 Video Tutorials
 ===============
