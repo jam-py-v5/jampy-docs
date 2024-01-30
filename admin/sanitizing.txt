@@ -2,7 +2,7 @@
 Sanitizing
 ==========
 
-To prevent Cross Site Scripting (XSS) attacks, Jam.py sanitizese field values 
+To prevent Cross Site Scripting (XSS) attacks, Jam.py sanitizes field values 
 displayed in the table columns.
 
 For example, if field contains the following text:
@@ -11,13 +11,13 @@ For example, if field contains the following text:
 
   "<span style='color: red'>USA</span>"
 
-when unsanitized it will be displayed in the table column as follows:
+when un-sanitized, it will be displayed in the table column as follows:
 
 .. image:: /admin/_images/unsanitized.png
 	:align: center
 	:alt: unsanitized.png
 
-When the field text sanitized, it is transformed to the following:
+When the field text is sanitized, it is transformed to the following:
 
 .. code-block:: html
 
