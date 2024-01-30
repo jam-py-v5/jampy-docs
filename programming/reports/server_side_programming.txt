@@ -54,7 +54,7 @@ method to create a copy of the invoices journal.
 
     invoices = report.task.invoices.copy()
 
-We create the copiy because multiple users can simultaneously generate the same 
+We create the copy because multiple users can simultaneously generate the same 
 report in parallel threads.
 
 Then we call the set_where method of the copy:
