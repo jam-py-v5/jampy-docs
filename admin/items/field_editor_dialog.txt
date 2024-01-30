@@ -91,7 +91,7 @@ Interface tab
 * **TextArea** - for text fields if this attribute is set the textarea element
   will be created for these fields in the :doc:`Edit Form Dialog <edit_form_dialog>`
 
-* **Do not sanitize** - set this attributeto prevent default sanitizing of the 
+* **Do not sanitize** - set this attribute to prevent default sanitizing of the 
   field value, see :doc:`Sanitizing </admin/sanitizing>`
 
 * **Alignment** - determines the alignment of text in the controls that display 
