@@ -40,7 +40,7 @@ To see the changes made in Application builder go to the Project page and reload
    items/index
    details
    lookup_lists
-   intergation_with_existing_database
+   integration_with_existing_database
    saving_history
    record_locking
    language_support
