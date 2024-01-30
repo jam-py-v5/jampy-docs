@@ -50,7 +50,7 @@ enabled for the lookup field.
 
 
 While we are here, set **Default value** of the "Contact date" field to "CURRENT DATETIME",
-so that the date will be automatially initialised to the current date and time.
+so that the date will be automatically initialised to the current date and time.
 
 .. image:: /intro/_images/contact_date_default_value.png
 	:align: center
