@@ -24,8 +24,8 @@ Attrubutes
     
     report/at_*
 
-Mehods 
-======
+Methods 
+=======
 
 .. toctree::
     :maxdepth: 1

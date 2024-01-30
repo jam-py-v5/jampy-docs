@@ -26,8 +26,8 @@ Attrubutes
     
     task/at_*
 
-Mehods 
-======
+Methods 
+=======
 
 .. toctree::
     :maxdepth: 1

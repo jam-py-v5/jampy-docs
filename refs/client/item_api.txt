@@ -26,8 +26,8 @@ Attrubutes and properties
     
     item/at_*
 
-Mehods 
-======
+Methods 
+=======
 
 .. toctree::
     :maxdepth: 1
