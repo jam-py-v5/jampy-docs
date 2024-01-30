@@ -5,7 +5,7 @@ Lookup fields
 Now, we will create the "Contacts" journal and use lookup fields to connect contacts to customers. Lookup fields allow an element of one item (i.e., catalog or journal) to reference an element from an other item.
 
 Select the "Journals" group in the project task tree, and add a new journal in the
-same way that we created the "Customers" catalog. Journals, like catalogs, correspond to different tables in the database. See this :doc:`link </faq faq_catalogs_vs_journals>` for more information.
+same way that we created the "Customers" catalog. Journals, like catalogs, correspond to different tables in the database. See this :doc:`link </faq/faq_catalogs_vs_journals>` for more information.
 
 First, add a "Contact date" field of the ``DATETIME`` type,
 and a "Notes" field of the ``TEXT`` type.
