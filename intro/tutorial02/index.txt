@@ -48,7 +48,7 @@ in Application Builder and set **View width** to 120 and
 
 .. note::
 
-  You can set the image placehodler by double-clicking on it.
+  You can set the image placeholder by double-clicking on it.
 
 In the
 :doc:`View Form Dialog </admin/items/view_form_dialog>`
