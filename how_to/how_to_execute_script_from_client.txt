@@ -21,7 +21,7 @@ The code in the client module:
   function on_view_form_created(item) {
       var btn = item.add_view_button('Calculate', {type: 'primary'});
       btn.click(function() {
-          item.server('calulate', [1, 2, 3], function(result, error) {
+          item.server('calculate', [1, 2, 3], function(result, error) {
             if (error) {
               item.alert_error(error);
             }

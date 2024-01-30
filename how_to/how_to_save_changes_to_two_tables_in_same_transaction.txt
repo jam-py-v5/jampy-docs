@@ -12,7 +12,7 @@ changes to the database.
 In the second example the connection is received from connection pool and passed 
 to each 
 :doc:`apply </refs/server/item/m_apply>`
-method so changes are commited at the end.
+method so changes are committed at the end.
 
 .. code-block:: py
 
