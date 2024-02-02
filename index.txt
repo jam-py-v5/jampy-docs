@@ -34,6 +34,14 @@ Or visit the
 
 .. _`Jam.py Application Design Tips`: https://jampyapplicationbuilder.com/tips/
 
+
+To download this document as a single PDF, please visit:
+
+https://jampy-docs.readthedocs.io/_/downloads/en/latest/pdf/
+
+The PDF is built instantly after every commit into the repository. Hence, some data on this site might be older than the PDF.  
+
+
 Video Tutorials
 ===============
 
