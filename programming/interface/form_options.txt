@@ -13,7 +13,7 @@ behavior:
 
 * :doc:`param_options </refs/client/report/at_param_options>`
 
-This is an object that has the following attributes, specifing parameters of the 
+This is an object that has the following attributes, specifying parameters of the 
 modal form:
 
 * ``width`` - the width of the modal form, the default value is 560 px,

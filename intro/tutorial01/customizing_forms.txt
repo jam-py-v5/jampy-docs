@@ -35,6 +35,7 @@ corresponding column header of the table. Then save all changes by pressing **OK
 To change the way the fields are displayed in the edit form, click the **Edit Form**
 button to open the
 :doc:`Edit Form Dialog </admin/items/edit_form_dialog>`.
+This works in a very similar way to the **View Form** above.
 
 .. image:: /intro/_images/edit_contacts2.png
 	:align: center

@@ -54,6 +54,7 @@ Open a new page, type
 	127.0.0.1:8080
 
 in the address bar and press Enter.
+A new project appears with an empty menu.
 
 .. image:: /intro/_images/empty_project.png
 	:align: center
