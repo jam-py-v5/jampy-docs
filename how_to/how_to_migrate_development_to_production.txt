@@ -60,19 +60,19 @@ Existing project migration
     You can only import metadata into a new project.
 
 
-Importing metadata with server shutdown
-=======================================
+Importing metadata with the http server process shutdown
+========================================================
 
-Stop the server and copy the metadata zip file to *migration* folder in the 
+Stop the http server and copy the metadata zip file to *migration* folder in the 
 project directory. If the folder doesn't exist, create it.
 
-Start the server. The web application, while initializing itself, will
+Start the http server. The web application, while initializing itself, will
 import the metadata file. You can see the information on how the file was 
 imported in the log file in the *logs* folder of the project directory.
 If the import is successful, the zip file will be deleted.
 
-Importing metadata without server shutdown
-==========================================
+Importing metadata without the http server process  shutdown
+=============================================================
 
 Click the 
 :doc:`Import </admin/project/import>`

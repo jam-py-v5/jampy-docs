@@ -117,7 +117,7 @@ You can change the way tables are displayed. The tables that are created by the
 :doc:`create_table </refs/client/item/m_create_table>`
 method have a css class "dbtable" and a class with a name that is the 
 :doc:`item_name </refs/client/abstr_item/at_item_name>`
-attribute of the item. each column of the table alse have a class with a 
+attribute of the item. Each column of the table also has a class with a 
 name that is the 
 :doc:`field_name </refs/client/field/at_field_name>`
 attribute of the corresponding field.
@@ -131,7 +131,7 @@ The example, the following code will display cells of the **Invoices** table
       font-weight: bold;
   }
 
-One more way to change the way the field colum is displayed is to write the
+One more way to change the way the field column is displayed is to write the
 :doc:`on_field_get_html </refs/client/item/on_field_get_html>`
 event handler.
 

@@ -34,9 +34,9 @@ otherwise we display a warning.
       invoices.alert_error('Invoices: record not found.');
   }
 
-In the example above the open method is not executed syncroniously.
+In the example above the open method is not executed synchronously.
 
-The code below does it asyncroniously:
+The code below does it asynchronously:
 
 .. code-block:: js
 

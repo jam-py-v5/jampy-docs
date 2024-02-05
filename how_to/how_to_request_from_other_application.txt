@@ -9,7 +9,7 @@ a post request that has 'ext' added to url. For example:
 
   http://example.com/ext/edit
 
-When an web app on the server receives such request it 
+When an web app on the server receives such request, it 
 generates the 
 :doc:`on_ext_request </refs/server/task/on_ext_request>`
 event
