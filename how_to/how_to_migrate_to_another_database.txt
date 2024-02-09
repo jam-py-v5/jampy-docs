@@ -23,7 +23,7 @@ To do this, follow these steps:
 #. copy data from SQlite to Postgress database using the 
    :doc:`copy_database </refs/server/task/m_copy_database>` method of the task:
   
-   * create in the sever module of the task the following function:
+   * within the Project\Task create the following Server Module function (adjust the below database path with correct one):
   
      .. code-block:: py
     
@@ -32,7 +32,7 @@ To do this, follow these steps:
        def copy_db(task):
            task.copy_database(SQLITE, '/home/work/demo/demo.sqlite')
   
-   * then you can execute it one of the following ways:
+   * then, execute it with the one of the following ways:
   
      * call this function in the 
        :doc:`on_created </refs/server/task/on_created>` event handler:
@@ -64,11 +64,11 @@ To do this, follow these steps:
 
          task.server('copy_db')
          
-#. Remove the code that was used.         
+#. Remove the code that was used immediately after this procedure.         
 
 .. note::
 	
 	You can not migrate to SQLite database if the current database has foreign
-	keys
+	keys.
 
     
