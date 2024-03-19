@@ -235,7 +235,7 @@ html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
 
-    'analytics_id': 'UA-122962025-3',  #  Provided by Google in your dashboard
+    'analytics_id': 'UA-106491578-1',  #  Provided by Google in your dashboard
 
     'analytics_anonymize_ip': False,
 
