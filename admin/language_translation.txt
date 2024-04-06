@@ -32,6 +32,6 @@ you will be included to the contributors list.
   
   Can't delete the field %(field)s. It's used in field definitions:%(fields)s
   
-  **russian translation**:
+  **Kazakhstan translation**:
   
   Нельзя удалить поле %(field)s. Используется в определении полей:%(fields)s
