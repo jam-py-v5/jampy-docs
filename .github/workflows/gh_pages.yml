@@ -37,10 +37,10 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-        run: python3 -m pip install -r ./requirements.txt
 
       - name: Install dependencies
-
+        run: python3 -m pip install -r ./requirements.txt
+        
       - name: Building documentation
         run: |
           pip install sphinx Pallets-Sphinx-Themes
@@ -48,12 +48,6 @@ jobs:
           sphinx-build . public -b dirhtml
           touch ./public/.nojekyll
 
-      - name: github pages deploy
-        uses: peaceiris/actions-gh-pages@v4
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PAT }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
