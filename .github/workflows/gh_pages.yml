@@ -44,7 +44,6 @@ jobs:
       - name: Building documentation
         run: |
           pip install sphinx Pallets-Sphinx-Themes
-          sphinx-apidoc --no-toc --module-first -o docs/autodoc src/stenotype
           sphinx-build . public -b dirhtml
           touch ./public/.nojekyll
 
