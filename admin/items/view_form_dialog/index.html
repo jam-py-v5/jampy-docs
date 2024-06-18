@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View Form Dialog &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/items/view_form_dialog.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Filters Dialog" href="../filters_dialog/" />
+    <link rel="prev" title="Edit Form Dialog" href="../edit_form_dialog/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Business application builder</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../sanitizing/">Sanitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accept_string/">Accept string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../project/">Project management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../roles/">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../users/">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code_editor/">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../task/">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../groups/">Groups</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Items</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../item_editor_dialog/">Item Editor Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../field_editor_dialog/">Field Editor Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../edit_form_dialog/">Edit Form Dialog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">View Form Dialog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#layout-tab">Layout tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#form-tab">Form tab</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../filters_dialog/">Filters Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../details_dialog/">Details Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../order_dialog/">Order Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indices_dialog/">Indices Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foreign_keys_dialog/">Foreign Keys Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reports_dialog/">Reports Dialog</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../details/">Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lookup_lists/">Lookup List Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration_with_existing_database/">Intergation with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../saving_history/">Saving audit trail/change history made by users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../record_locking/">Record locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_support/">Language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_translation/">Language translation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Business application builder</a> &raquo;</li>
+          <li><a href="../">Items</a> &raquo;</li>
+      <li>View Form Dialog</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="view-form-dialog">
+<h1>View Form Dialog<a class="headerlink" href="#view-form-dialog" title="Permalink to this heading">¶</a></h1>
+<p>The <strong>View Form Dialog</strong>
+opens when a developer selects the item in the Application builder and clicks
+the <strong>View Form</strong> button.</p>
+<p>It has two tabs <strong>Layout</strong> and <strong>Form</strong>.</p>
+<section id="layout-tab">
+<h2>Layout tab<a class="headerlink" href="#layout-tab" title="Permalink to this heading">¶</a></h2>
+<p>On the Layout tab, you can specify how the table is displayed in the view form of
+the item.</p>
+<img alt="View Form Layout tab" class="align-center" src="../../../_images/view_form_layout.png" />
+<section id="setting-table-fields">
+<h3>Setting table fields<a class="headerlink" href="#setting-table-fields" title="Permalink to this heading">¶</a></h3>
+<p>The <strong>Layout</strong> tab has two lists of fields. The left list contains the fields
+that were selected be displayed in the table. In the right list there are available
+fields that you can select.</p>
+<p>To select a field, select it in the right list and use the <strong>Left arrow</strong>
+button in the center or press <strong>Space</strong> key on a keyboard.</p>
+<p>To unselect a field, select it in the left list and use the <strong>Right arrow</strong>
+button in the center or press <strong>Space</strong> key on a keyboard.</p>
+<p>To order the selected fields use the buttons that located below left list.</p>
+<p>You can specify the width of the selected columns. To do this, select the field
+and enter its width in the Width column. The value can be specified in any
+supported CSS unit, for example, in pixels - <code class="docutils literal notranslate"><span class="pre">px</span></code>, in percentage, relative to
+the parent element - <code class="docutils literal notranslate"><span class="pre">%</span></code>. The width specified as an integer value is
+interpreted as the width specified in pixels.</p>
+<p>Examples of column width values:</p>
+<ul class="simple">
+<li><p>100px</p></li>
+<li><p>100</p></li>
+<li><p>50%</p></li>
+<li><p>2cm</p></li>
+</ul>
+</section>
+<section id="setting-table-options">
+<h3>Setting table options<a class="headerlink" href="#setting-table-options" title="Permalink to this heading">¶</a></h3>
+<p>On the right side of the “Layout” tab are the controls that you can use to
+specify the options of the table displayed in the view form:</p>
+<ul class="simple">
+<li><p><strong>Multiple selection</strong>  - if  set, a leftmost
+column with check-boxes will be created to select records. So, that when a user
+clicks on the check-box, the value of the primary key field of the record will
+be added to or deleted from the
+<a class="reference internal" href="../../../refs/client/item/at_selections/"><span class="doc">selections</span></a>
+attribute.</p></li>
+<li><p><strong>Dblclick edit</strong> - if set, the edit form will be displayed when the user
+double-clicks on the table row.</p></li>
+<li><p><strong>Number of rows</strong> - an integer number, if set, specifies the number of rows
+displayed by the table, otherwise, if <strong>Height</strong> is not specified,
+the application calculates the height of the table, based on the page height</p></li>
+<li><p><strong>Height</strong> - an integer number, if set, specifies the height of the table in
+pixels, otherwise , if <strong>Number of rows</strong> is not specified, the application
+calculates the height of the table, based on the page height</p></li>
+<li><p><strong>Row lines</strong> - an integer, specifying the number of lines of text displayed
+in a table row, if it is 0, the height of the row is determined by the contents of
+the row cells</p></li>
+<li><p><strong>Selected row lines</strong> - an integer value, if <strong>Row lines</strong> is set and
+this value is greater that 0, it specifies the minimal number of
+lines of text displayed in the selected row of the table</p></li>
+<li><p><strong>Freeze columns</strong> - an integer, if it is greater than 0, it specifies
+number of first columns that become frozen - they will not scroll when the table
+is scrolled horizontally.</p></li>
+<li><p><strong>Sort fields</strong> - click the button to the right of the input field to open the list of fields and
+select the fields by which you can sort the contents of the table by clicking
+in the corresponding column header of the table.</p></li>
+<li><p><strong>Summary fields</strong> - click the button to the right of the input field to open the list of fields
+and the fields for which the summary will be calculated and displayed in the
+corresponding column footer. For for numeric fields sums will be calculated,
+for not numeric fields - the number of records.</p></li>
+</ul>
+<p>You can get or change these values programmatically on the client by using the
+<a class="reference internal" href="../../../refs/client/item/at_table_options/"><span class="doc">table_options</span></a>
+attribute of the item</p>
+</section>
+</section>
+<section id="form-tab">
+<h2>Form tab<a class="headerlink" href="#form-tab" title="Permalink to this heading">¶</a></h2>
+<img alt="View Form Form tab" class="align-center" src="../../../_images/view_form_form.png" />
+<p>On this tab are the controls that you can use to specify the options of the
+view form</p>
+<ul class="simple">
+<li><p><strong>Form border</strong> - if set, the border will be displayed around the form</p></li>
+<li><p><strong>Form header</strong> - if set, the form header will be created and displayed
+containing form title and various buttons</p></li>
+<li><p><strong>History</strong> - if set and
+<a class="reference internal" href="../../saving_history/"><span class="doc">saving change history is enabled</span></a>, the history
+button will be displayed in the form header</p></li>
+<li><p><strong>Refresh button</strong> - if set, the refresh button will be created in the form
+header, that will allow users to refresh the page</p></li>
+<li><p><strong>Search</strong> - if set, the search input will be created in the form header</p></li>
+<li><p><strong>Default search field</strong> - click the button to the right of the input field to select
+a default search field</p></li>
+<li><p><strong>Filters</strong> - if set and there are visible filters, the filter button will
+be created in the form header</p></li>
+<li><p><strong>Close button</strong> - if set, the close button will be created in the upper-right
+corner of the form</p></li>
+<li><p><strong>Close on escape</strong> -  - if set, pressing on the Escape key will close the form</p></li>
+<li><p><strong>Width</strong> - an integer, the width of the modal form, if not set the value is
+600 px</p></li>
+<li><p><strong>View details</strong> - click the button to the right of the input field to select
+details, that will be displayed in the view form</p></li>
+<li><p><strong>Detail height</strong> - an integer, the height of the details displayed in the
+view form, if not set, the height of the detail table is 232px</p></li>
+<li><p><strong>Buttons on top</strong> - if this check box is checked the buttons are displayed on
+the top of the view form, when form has a default form template</p></li>
+</ul>
+<p>You can get or change these values programmatically on the client by using the
+<a class="reference internal" href="../../../refs/client/item/at_view_options/"><span class="doc">view_options</span></a>
+attribute of the item</p>
+<p>Click the <strong>OK</strong> button to save to result or <strong>Cancel</strong> to cancel the operation.
+After saving, you can see the changes by refreshing the project page.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../edit_form_dialog/" class="btn btn-neutral float-left" title="Edit Form Dialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../filters_dialog/" class="btn btn-neutral float-right" title="Filters Dialog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

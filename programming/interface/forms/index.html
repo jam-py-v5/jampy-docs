@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/interface/forms.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Form templates" href="../form_templates/" />
+    <link rel="prev" title="Initializing application" href="../initializing_application/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Client side programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_html/">Index.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../initializing_application/">Initializing application</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../form_templates/">Form templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../form_events/">Form events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../form_options/">Form options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../form_examples/">Form examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_controls/">Data-aware controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/">Data programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Client side programming</a> &raquo;</li>
+      <li>Forms</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="forms">
+<h1>Forms<a class="headerlink" href="#forms" title="Permalink to this heading">¶</a></h1>
+<p>One of the key concepts of the framework is the concept of form.</p>
+<p>When the user clicks the menu item of the main menu, the
+<a class="reference internal" href="../../../refs/client/item/m_view/"><span class="doc">view</span></a>
+method of the corresponding item is executed, which creates the view form.</p>
+<p>This view form can have the <strong>New</strong> and <strong>Edit buttons</strong>, clicking on which
+the
+<a class="reference internal" href="../../../refs/client/item/m_insert_record/"><span class="doc">insert_record</span></a>
+and
+<a class="reference internal" href="../../../refs/client/item/m_edit_record/"><span class="doc">edit_record</span></a>
+methods will be executed. These methods create an item edit form.</p>
+<p>Forms are based on HTML
+<a class="reference internal" href="../form_templates/"><span class="doc">form templates</span></a>
+that determine their layout. Form templates are defined in the
+<a class="reference internal" href="../index_html/"><span class="doc">Index.html</span></a>
+file, located in the root folder of the project.</p>
+<p>The application already has default templates for viewing and editing data,
+for specifying filters and report parameters.</p>
+<p>For example, all edit forms of the Demo project use the following html template:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;default-edit&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-body&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;edit-body&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;edit-detail&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-footer&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ok-btn&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn expanded-btn&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-ok&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> OK<span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;muted&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>[Ctrl+Enter]<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cancel-btn&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn expanded-btn&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-remove&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> Cancel
+        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>You can define your own form templates to create your own custom forms. See
+<a class="reference internal" href="../form_templates/"><span class="doc">Form templates</span></a></p>
+<p>When some method creates a form the application finds corresponding html template.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">container</span></code> (a Jquery object) parameter is specified, the method empties it
+and appends the html template to it, otherwise, it creates an empty modal form
+and appends the template to the form.</p>
+<p>After this it assigns item’s <code class="docutils literal notranslate"><span class="pre">prefix_form</span></code>
+attribute to the template, triggers an <code class="docutils literal notranslate"><span class="pre">on_prefix_form_created</span></code> events,
+shows the form and triggers <code class="docutils literal notranslate"><span class="pre">on_prefix_form_shown</span></code> events, where prefix is a
+type of the form (view, edit, filter, param).
+See <a class="reference internal" href="../form_events/"><span class="doc">Form events</span></a> for details.</p>
+<p>Below is an example of the <code class="docutils literal notranslate"><span class="pre">on_edit_form_created</span></code> event handler of the task:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_edit_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">edit_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#ok-btn&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click.task&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">apply_record</span><span class="p">()</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">edit_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#cancel-btn&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click.task&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">cancel_edit</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">});</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">master</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">owner</span><span class="p">.</span><span class="nx">on_edit_form_created</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">owner</span><span class="p">.</span><span class="nx">on_edit_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">on_edit_form_created</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">on_edit_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">create_inputs</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">edit_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.edit-body&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">create_detail_views</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">edit_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.edit-detail&quot;</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example, the the <code class="docutils literal notranslate"><span class="pre">find</span></code> method  of JQuery is used to to find
+elements on the form.</p>
+<p>First, we assign a JQuery <code class="docutils literal notranslate"><span class="pre">click</span></code> event to <strong>OK</strong> and <strong>Cancel</strong> buttons,
+so
+<a class="reference internal" href="../../../refs/client/item/m_cancel_edit/"><span class="doc">cancel_edit</span></a>
+and
+<a class="reference internal" href="../../../refs/client/item/m_apply_record/"><span class="doc">apply_record</span></a> methods will be executed
+when user clicks on the buttons. This methods cancel or apply changes made to
+the record respectively and call the
+<a class="reference internal" href="../../../refs/client/item/m_close_edit_form/"><span class="doc">close_edit_form</span></a>
+method to close the form.</p>
+<p>Then, if item is not a detail and has an event handler <code class="docutils literal notranslate"><span class="pre">on_edit_form_created</span></code>,
+defined in the owner’s client module, this event handler is executed.</p>
+<p>After that, if item has an event handler <code class="docutils literal notranslate"><span class="pre">on_edit_form_created</span></code>,
+defined in the item’s client module, this event handler is executed.</p>
+<p>In these event handlers some additional actions could be executed.
+For example you can assign click events to buttons or some other elements
+contained in your edit form template, change
+<a class="reference internal" href="../../../refs/client/item/at_edit_options/"><span class="doc">edit_options</span></a>,
+create tables using the
+<a class="reference internal" href="../../../refs/client/item/m_create_table/"><span class="doc">create_table</span></a>
+method and so on.</p>
+<p>Then
+the
+<a class="reference internal" href="../../../refs/client/item/m_create_inputs/"><span class="doc">create_inputs</span></a>
+method is called to create inputs in the element with class “edit-body”</p>
+<p>Finally,
+<a class="reference internal" href="../../../refs/client/item/m_create_detail_views/"><span class="doc">create_detail_views</span></a>
+method is called to create details in the element with class “edit-detail”</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If some elements are missing in the form template, an exception will not be raised.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">close_prefix_form</span></code>, where <code class="docutils literal notranslate"><span class="pre">prefix</span></code> is the type of the form, closes the
+form of this type. But before form is closed the <code class="docutils literal notranslate"><span class="pre">on_prefix_form_close_query</span></code>
+and <code class="docutils literal notranslate"><span class="pre">on_prefix_form_closed</span></code> events are triggered. After form is closed it is
+removed from the DOM.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../initializing_application/" class="btn btn-neutral float-left" title="Initializing application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../form_templates/" class="btn btn-neutral float-right" title="Form templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

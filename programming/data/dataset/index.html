@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dataset &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/data/dataset.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Navigating datasets" href="../navigating_datasets/" />
+    <link rel="prev" title="Data programming" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface/">Client side programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Data programming</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#videos">Videos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../navigating_datasets/">Navigating datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modifying_datasets/">Modifying datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fields/">Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_fields/">Common fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_fields/">Lookup fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filtering_records/">Filtering records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../details/">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Data programming</a> &raquo;</li>
+      <li>Dataset</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dataset">
+<h1>Dataset<a class="headerlink" href="#dataset" title="Permalink to this heading">¶</a></h1>
+<p>Jam.py framework uses a dataset concept that is very close to
+datasets of <a class="reference external" href="https://en.wikipedia.org/wiki/Delphi_(programming_language)">Embarcadero Delphi</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are other ways to read and modify the database data. You can use the
+<a class="reference internal" href="../../../refs/server/task/m_connect/"><span class="doc">connect</span></a>
+method of the task to get a connection from the connection pool and use
+the connection to get access to the database using Python Database API.</p>
+</div>
+<p>All items with <code class="docutils literal notranslate"><span class="pre">item_type</span></code> “item” or “table” as well as their details (see
+<a class="reference internal" href="../../task_tree/"><span class="doc">Task tree</span></a>)
+can access data from associated tables from the project database and write
+changes to it. They all are objects of
+the Item class</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../refs/client/item_api/"><span class="doc">Item class</span></a> (on the client)</p></li>
+<li><p><a class="reference internal" href="../../../refs/server/item_api/"><span class="doc">Item class</span></a> (on the server)</p></li>
+</ul>
+<p>Both of these classes have the same attributes, methods, and events associated
+with the data handling.</p>
+<p>To get a dataset (a set of records) from the project dataset table, use the open
+method. This method, based on parameters, generates an SQL query to get a
+dataset.</p>
+<p>After dataset is opened, the application can navigate it, change its records or
+insert new ones and write changes to the item’s database table.</p>
+<p>For example, the following functions will set <em>support_rep_id</em> field values to
+the values of the <em>id</em> field on the client and server respectively:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">set_support_id</span><span class="p">(</span><span class="nx">customers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">customers</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">customers</span><span class="p">.</span><span class="nx">eof</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">customers</span><span class="p">.</span><span class="nx">edit</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">customers</span><span class="p">.</span><span class="nx">support_rep_id</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">customers</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">customers</span><span class="p">.</span><span class="nx">post</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">customers</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">customers</span><span class="p">.</span><span class="nx">apply</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_support_id</span><span class="p">(</span><span class="n">customers</span><span class="p">):</span>
+    <span class="n">customers</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">customers</span><span class="o">.</span><span class="n">eof</span><span class="p">():</span>
+        <span class="n">customers</span><span class="o">.</span><span class="n">edit</span><span class="p">()</span>
+        <span class="n">customers</span><span class="o">.</span><span class="n">support_rep_id</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">customers</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">customers</span><span class="o">.</span><span class="n">post</span><span class="p">()</span>
+        <span class="n">customers</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+    <span class="n">customers</span><span class="o">.</span><span class="n">apply</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>These functions get the <strong>customers</strong> item as a parameter. Then the <em>open</em>
+method is used to get a list of records from the customers table and each
+record is modified. In the end the changes are saved in the database table, using
+the apply method (see
+<a class="reference internal" href="../modifying_datasets/"><span class="doc">Modifying datasets</span></a>
+).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is a shorter way to navigate a dataset (see
+<a class="reference internal" href="../navigating_datasets/"><span class="doc">Navigating datasets</span></a>
+). For example, in python, the following loops are equivalent:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="n">customers</span><span class="o">.</span><span class="n">eof</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="n">customers</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">customers</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">customers</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">c</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<section id="videos">
+<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://youtu.be/gHTYj7h9ljI">Datasets</a> and <a class="reference external" href="https://youtu.be/1bUGmgBfrNw">Datasets Part 2</a> demonstrate almost all methods of working with
+datasets on specific examples</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Data programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../navigating_datasets/" class="btn btn-neutral float-right" title="Navigating datasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

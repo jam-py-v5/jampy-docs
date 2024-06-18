@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>on_apply events &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/server/on_apply_events.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="on_open_events" href="../on_open_events/" />
+    <link rel="prev" title="Server side programming" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface/">Client side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/">Data programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Server side programming</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">on_apply events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../on_open_events/">on_open_events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Server side programming</a> &raquo;</li>
+      <li>on_apply events</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="on-apply-events">
+<h1>on_apply events<a class="headerlink" href="#on-apply-events" title="Permalink to this heading">¶</a></h1>
+<p>When the <code class="docutils literal notranslate"><span class="pre">apply</span></code> method of the item is called
+on the <a class="reference internal" href="../../../refs/client/item/m_apply/"><span class="doc">client</span></a> or the
+<a class="reference internal" href="../../../refs/server/item/m_apply/"><span class="doc">server</span></a>, the server application, by default,
+generates SQL query, based on changes made to the dataset and executes it.</p>
+<p>This behavior can be changed by writing an
+<a class="reference internal" href="../../../refs/server/item/on_apply/"><span class="doc">on_apply</span></a>
+event handler in the item server module.</p>
+<p>Sometimes it becomes necessary to execute some code, when changes are saved, for
+all items. In this case the <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler of the task (declared
+in the task server module) can be used.</p>
+<p>The following code describes how these events are handled:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+<span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">on_apply</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">on_apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_apply</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_delta</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">)</span>
+<span class="c1">#...</span>
+<span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>It checks if the task has an <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler. If the <code class="docutils literal notranslate"><span class="pre">on_apply</span></code>
+event handler is declared in the task server module, it is executed.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler of the task is not declared or the result
+of the event handler returns <code class="docutils literal notranslate"><span class="pre">None</span></code>, the method checks whether the item has an
+<a class="reference internal" href="../../../refs/server/item/on_apply/"><span class="doc">on_apply</span></a>
+event handler. If it is declared in the item server module, it is executed.</p>
+<p>If the result returned by the item event handler is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the
+<code class="docutils literal notranslate"><span class="pre">apply_delta</span></code> method of the item is called that generates SQL query,
+execute it and returns the result</p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../how_to/how_to_multitenancy/"><span class="doc">Here is an example how on_apply can be used</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Server side programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../on_open_events/" class="btn btn-neutral float-right" title="on_open_events" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

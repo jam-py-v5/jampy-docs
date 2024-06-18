@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtering records &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/data/filtering_records.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Filters" href="../filters/" />
+    <link rel="prev" title="Lookup fields" href="../lookup_fields/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface/">Client side programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Data programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../dataset/">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../navigating_datasets/">Navigating datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modifying_datasets/">Modifying datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fields/">Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_fields/">Common fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_fields/">Lookup fields</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Filtering records</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../details/">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Data programming</a> &raquo;</li>
+      <li>Filtering records</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="filtering-records">
+<h1>Filtering records<a class="headerlink" href="#filtering-records" title="Permalink to this heading">¶</a></h1>
+<p>There are three ways to define what records an item
+<a class="reference internal" href="../dataset/"><span class="doc">dataset</span></a>
+will get from the database table
+when the <code class="docutils literal notranslate"><span class="pre">open</span></code> method is called:</p>
+<ul class="simple">
+<li><p>to specify <code class="docutils literal notranslate"><span class="pre">where</span></code> parameter (option) of the <code class="docutils literal notranslate"><span class="pre">open</span></code> method,</p></li>
+<li><p>call the <code class="docutils literal notranslate"><span class="pre">set_where</span></code> method, before calling the <code class="docutils literal notranslate"><span class="pre">open</span></code> method,</p></li>
+<li><p>or use
+<a class="reference internal" href="../filters/"><span class="doc">filters</span></a>.</p></li>
+</ul>
+<p>When <code class="docutils literal notranslate"><span class="pre">where</span></code> parameter is specified, it is always used even if the <code class="docutils literal notranslate"><span class="pre">set_where</span></code>
+method was called or item has filters whose values have been set.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">where</span></code> parameter is omitted the parameter passed to the <code class="docutils literal notranslate"><span class="pre">set_where</span></code>
+method are used.</p>
+<p>For example on the client in the following code in the first call of the <code class="docutils literal notranslate"><span class="pre">open</span></code>
+method the <code class="docutils literal notranslate"><span class="pre">where</span></code> option will be used to filter records,
+in the second call the parameters passed to <code class="docutils literal notranslate"><span class="pre">set_where</span></code> and only the third
+time the value of <code class="docutils literal notranslate"><span class="pre">invoicedate1</span></code> filter will be used</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">test</span><span class="p">(</span><span class="nx">invoices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">setYear</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">getFullYear</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">));</span>
+
+<span class="w">    </span><span class="nx">invoices</span><span class="p">.</span><span class="nx">clear_filters</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">invoices</span><span class="p">.</span><span class="nx">filters</span><span class="p">.</span><span class="nx">invoicedate1</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">date</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nx">invoices</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span><span class="nx">where</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">invoicedate__ge</span><span class="o">:</span><span class="w"> </span><span class="nx">date</span><span class="p">}});</span>
+
+<span class="w">    </span><span class="nx">invoices</span><span class="p">.</span><span class="nx">set_where</span><span class="p">({</span><span class="nx">invoicedate__ge</span><span class="o">:</span><span class="w"> </span><span class="nx">date</span><span class="p">});</span>
+<span class="w">    </span><span class="nx">invoices</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+
+<span class="w">    </span><span class="nx">invoices</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="p">}</span>
+
+
+<span class="nx">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datetime</span><span class="p">.</span><span class="nx">datetime</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">datetime</span><span class="p">.</span><span class="nx">timedelta</span><span class="p">(</span><span class="nx">days</span><span class="o">=</span><span class="mf">3</span><span class="o">*</span><span class="mf">365</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The same code on the server looks the following way:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">invoices</span><span class="p">):</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">invoices</span><span class="o">.</span><span class="n">clear_filters</span><span class="p">()</span>
+    <span class="n">invoices</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">invoicedate1</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">date</span>
+
+    <span class="n">invoices</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;invoicedate__ge&#39;</span><span class="p">:</span> <span class="n">date</span><span class="p">})</span>
+
+    <span class="n">invoices</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="n">invoicedate__ge</span><span class="o">=</span><span class="n">date</span><span class="p">)</span>
+    <span class="n">invoices</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+
+    <span class="n">invoices</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In the framework, the following symbols and corresponding constants are defined
+to filter records:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17.4%" />
+<col style="width: 13.0%" />
+<col style="width: 8.7%" />
+<col style="width: 60.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Filter type</p></th>
+<th class="head"><p>Filter symbol</p></th>
+<th class="head"><p>Constant</p></th>
+<th class="head"><p>SQL Operator</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">EQ</span></code></p></td>
+<td><p>‘eq’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_EQ</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NE</span></code></p></td>
+<td><p>‘ne’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_NE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LT</span></code></p></td>
+<td><p>‘lt’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_LT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">LE</span></code></p></td>
+<td><p>‘le’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_LE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">GT</span></code></p></td>
+<td><p>‘gt’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_GT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">GE</span></code></p></td>
+<td><p>‘ge’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_GE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">IN</span></code></p></td>
+<td><p>‘in’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_IN</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">IN</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">IN</span></code></p></td>
+<td><p>‘not_in’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_NOT_IN</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">IN</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RANGE</span></code></p></td>
+<td><p>‘range’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_RANGE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">BETWEEN</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ISNULL</span></code></p></td>
+<td><p>‘isnull’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_ISNULL</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">IS</span> <span class="pre">NULL</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">EXACT</span></code></p></td>
+<td><p>‘exact’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_EXACT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CONTAINS</span></code></p></td>
+<td><p>‘contains’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_CONTAINS</span></code></p></td>
+<td><p>uses <code class="docutils literal notranslate"><span class="pre">LIKE</span></code> with the “%” sign to find records where field value contains a search string</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">STARTWITH</span></code></p></td>
+<td><p>‘startwith’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_STARTWITH</span></code></p></td>
+<td><p>uses <code class="docutils literal notranslate"><span class="pre">LIKE</span></code> with the “%” sign to find records where field value starts with a search string</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ENDWITH</span></code></p></td>
+<td><p>‘endwith’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_ENDWITH</span></code></p></td>
+<td><p>uses <code class="docutils literal notranslate"><span class="pre">LIKE</span></code> with the “%” sign to find records where field value ends with a search string</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONTAINS</span> <span class="pre">ALL</span></code></p></td>
+<td><p>‘contains_all’</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FILTER_CONTAINS_ALL</span></code></p></td>
+<td><p>uses <code class="docutils literal notranslate"><span class="pre">LIKE</span></code> with the “%” sign to find records where field value contains all words of a search string</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">where</span></code> the parameter of the <code class="docutils literal notranslate"><span class="pre">open</span></code> method is a dictionary, whose keys
+are the names of the fields that are followed, after double underscore, by a
+filter symbol. For <code class="docutils literal notranslate"><span class="pre">EQ</span></code> filter the filtering symbol ‘__eq’ can be omitted.
+For example <code class="docutils literal notranslate"><span class="pre">{'id':</span> <span class="pre">100}</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">{'id__eq':</span> <span class="pre">100}</span></code>.</p>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference internal" href="../dataset/"><span class="doc">Dataset</span></a></p>
+<p><a class="reference internal" href="../filters/"><span class="doc">Filters</span></a></p>
+<section id="client">
+<h3>Client<a class="headerlink" href="#client" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference internal" href="../../../refs/client/item/m_open/"><span class="doc">open</span></a></p>
+<p><a class="reference internal" href="../../../refs/client/item/m_set_where/"><span class="doc">set_where</span></a></p>
+</section>
+<section id="server">
+<h3>Server<a class="headerlink" href="#server" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference internal" href="../../../refs/server/item/m_open/"><span class="doc">open</span></a></p>
+<p><a class="reference internal" href="../../../refs/server/item/m_set_where/"><span class="doc">set_where</span></a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../lookup_fields/" class="btn btn-neutral float-left" title="Lookup fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../filters/" class="btn btn-neutral float-right" title="Filters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

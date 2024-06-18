@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New catalog &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/intro/tutorial01/new_catalog.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Lookup fields" href="../lookup_fields/" />
+    <link rel="prev" title="New project" href="../new_project/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Getting started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../install/">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_project/">Creating a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demo_project/">Demo project</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Tutorial. Part 1. First project</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../new_project/">New project</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">New catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_fields/">Lookup fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_list/">Lookup lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../customizing_forms/">Customizing Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indexes/">Indexes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/">Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial02/">Tutorial. Part 2. File and image fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial03/">Tutorial. Part 3. Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Getting started</a> &raquo;</li>
+          <li><a href="../">Tutorial. Part 1. First project</a> &raquo;</li>
+      <li>New catalog</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="new-catalog">
+<h1>New catalog<a class="headerlink" href="#new-catalog" title="Permalink to this heading">¶</a></h1>
+<p>Let’s go back to the Application builder page and create a “Customers” catalog.
+A catalog corresponds to a new table in the database.</p>
+<p>To do this, select the “Catalogs” group in the project tree and click the <strong>New</strong>
+button on the bottom right corner of the page</p>
+<img alt="Catalogs" class="align-center" src="../../../_images/catalogs.png" />
+<p>In the
+<a class="reference internal" href="../../../admin/items/item_editor_dialog/"><span class="doc">Item Editor</span></a>
+dialog that appears, fill in the caption and name of the new catalog. The caption
+is the name that will be displayed to users, and the name is the variable name that
+will be used in code (Python or JS) to refer to this catalog. The name must be a
+valid Python identifier.</p>
+<img alt="New customers catalog" class="align-center" src="../../../_images/customers_new.png" />
+<p>Then, click the <strong>New</strong> button on the bottom right corner of the dialog to add a new field. The
+<a class="reference internal" href="../../../admin/items/field_editor_dialog/"><span class="doc">Field Editor</span></a>
+dialog appears. Type the caption and name of the
+“Firstname” field, select its type (here <code class="docutils literal notranslate"><span class="pre">TEXT</span></code> with 30 characters)
+and click the <strong>OK</strong> button.</p>
+<img alt="New journal tasks" class="align-center" src="../../../_images/firstname.png" />
+<p>Similarly, add the “Lastname” and “Phone” fields. When adding the “Lastname”
+field, check the <strong>Required</strong> attribute. This requires that the field is set
+when creating a new item.</p>
+<img alt="Customers fields" class="align-center" src="../../../_images/customers_fields.png" />
+<p>Now, to save the changes, click the <strong>OK</strong> button. When saving, the Application
+builder created the <code class="docutils literal notranslate"><span class="pre">CRM_CUSTOMERS</span></code> table in the <code class="docutils literal notranslate"><span class="pre">ctm.sqlite</span></code> database:</p>
+<img alt="Table created" class="align-center" src="../../../_images/customer_sql.png" />
+<p>Go to the Project page and make sure it is refreshed</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">127.0.0.1:8080</span>
+</pre></div>
+</div>
+<p>Then, click the <strong>New</strong> button to create a new customer.
+Fill in the dialog, then click the <strong>OK</strong> button:</p>
+<img alt="Customers page" class="align-center" src="../../../_images/customers_refresh.png" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../new_project/" class="btn btn-neutral float-left" title="New project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../lookup_fields/" class="btn btn-neutral float-right" title="Lookup fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

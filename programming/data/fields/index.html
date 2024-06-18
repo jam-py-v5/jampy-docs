@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fields &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/data/fields.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Common fields" href="../common_fields/" />
+    <link rel="prev" title="Modifying datasets" href="../modifying_datasets/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface/">Client side programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Data programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../dataset/">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../navigating_datasets/">Navigating datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modifying_datasets/">Modifying datasets</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_fields/">Common fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_fields/">Lookup fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filtering_records/">Filtering records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../details/">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Data programming</a> &raquo;</li>
+      <li>Fields</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fields">
+<h1>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">¶</a></h1>
+<p>All items, working with database table data have a
+<a class="reference internal" href="../../../refs/client/item/at_fields/"><span class="doc">fields</span></a>
+attribute - a list of field objects, which are used to represent fields in item’s
+table records.</p>
+<p>Every field have the following attributes:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Client</p></th>
+<th class="head"><p>Server</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../refs/client/field/at_owner/"><span class="doc">owner</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_owner/"><span class="doc">owner</span></a></p></td>
+<td><p>The item that owns this field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../refs/client/field/at_field_name/"><span class="doc">field_name</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_field_name/"><span class="doc">field_name</span></a></p></td>
+<td><p>The name of the field that will be used in programming code to get access to the field object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../refs/client/field/at_field_caption/"><span class="doc">field_caption</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_field_caption/"><span class="doc">field_caption</span></a></p></td>
+<td><p>The name of the field that appears to users.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../refs/client/field/at_field_type/"><span class="doc">field_type</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_field_type/"><span class="doc">field_type</span></a></p></td>
+<td><p>Type of the field, one of the following values: <strong>text</strong>, <strong>integer</strong>, <strong>float</strong>, <strong>currency</strong>,  <strong>date</strong>, <strong>datetime</strong>, <strong>boolean</strong>, <strong>blob</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../refs/client/field/at_field_size/"><span class="doc">field_size</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_field_size/"><span class="doc">field_size</span></a></p></td>
+<td><p>A size of the field with type <strong>text</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../refs/client/field/at_required/"><span class="doc">required</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_required/"><span class="doc">required</span></a></p></td>
+<td><p>Specifies whether a nonblank value for a field is required.</p></td>
+</tr>
+</tbody>
+</table>
+<p>To get access to the item dataset data, the Field class have the following properties:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Client</p></th>
+<th class="head"><p>Server</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../refs/client/field/at_value/"><span class="doc">value</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_value/"><span class="doc">value</span></a></p></td>
+<td><p>Use this property to get or set the field’s value of the current record. When reading the value is converted to the type of the field. So for fields of type integer, float and currency, if value for this field in database table record is NULL, value of this property is 0. To get unconverted value use the raw_value property.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../refs/client/field/at_text/"><span class="doc">text</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_text/"><span class="doc">text</span></a></p></td>
+<td><p>Use this property to get or set the value of the field as text.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../refs/client/field/at_lookup_value/"><span class="doc">lookup_value</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_lookup_value/"><span class="doc">lookup_value</span></a></p></td>
+<td><p>Use this property to get or set lookup value, see <a class="reference internal" href="../lookup_fields/"><span class="doc">Lookup fields</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../refs/client/field/at_lookup_text/"><span class="doc">lookup_text</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_lookup_text/"><span class="doc">lookup_text</span></a></p></td>
+<td><p>Use this property to get or set the lookup value of the field as text, see <a class="reference internal" href="../lookup_fields/"><span class="doc">Lookup fields</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../refs/client/field/at_display_text/"><span class="doc">display_text</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_display_text/"><span class="doc">display_text</span></a></p></td>
+<td><p>Represents the field’s value as it is displayed in data-aware controls. When the field is a lookup field it’s value is the lookup_text value, otherwise it is the text value, with regard of project locale parameters. This behavior can be overridden by the <a class="reference internal" href="../../../refs/client/item/on_get_field_text/"><span class="doc">on_field_get_text</span></a> event handler of the item that owns the field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../refs/client/field/at_raw_value/"><span class="doc">raw_value</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_raw_value/"><span class="doc">raw_value</span></a></p></td>
+<td><p>Use this property to get field value of the current record as it is stored in database. No conversion is used.</p></td>
+</tr>
+</tbody>
+</table>
+<p>In addition every field is an attribute of the item that owns it. So, to get
+access to a field of an item use the following syntax: <code class="docutils literal notranslate"><span class="pre">item.field_name</span></code></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">invoices</span><span class="p">.</span><span class="nx">total</span><span class="p">.</span><span class="nx">value</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">invoices.total</span></code> is the reference to the
+<strong>Total</strong> field of the <strong>Invoices</strong> item and the
+<code class="docutils literal notranslate"><span class="pre">invoices.total.value</span></code> is the value of this field</p>
+<p>Below are the values of the attributes of the fields of the <strong>invoices</strong> item in the
+<a class="reference internal" href="../../../intro/demo_project/"><span class="doc">Demo project</span></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>customer integer
+   value:  2
+   text:  2
+   lookup_value:  Köhler
+   lookup_text:  Köhler
+   display_text:  Leonie Köhler
+firstname integer
+   value:  2
+   text:  2
+   lookup_value:  Leonie
+   lookup_text:  Leonie
+   display_text:  Leonie
+billing_address integer
+   value:  2
+   text:  2
+   lookup_value:  Theodor-Heuss-Straße 34
+   lookup_text:  Theodor-Heuss-Straße 34
+   display_text:  Theodor-Heuss-Straße 34
+id integer
+   value:  1
+   text:  1
+   lookup_value:  None
+   lookup_text:
+   display_text:  1
+date date
+   value:  2014-01-01
+   text:  01/01/2014
+   lookup_value:  None
+   lookup_text:
+   display_text:  01/01/2014
+total currency
+   value:  2.08
+   text:  $2.08
+   lookup_value:  None
+   lookup_text:
+   display_text:  $2.08
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../modifying_datasets/" class="btn btn-neutral float-left" title="Modifying datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../common_fields/" class="btn btn-neutral float-right" title="Common fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

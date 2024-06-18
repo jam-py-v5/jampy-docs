@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Server-side report programming &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/reports/server_side_programming.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Jam.py FAQ" href="../../../faq/" />
+    <link rel="prev" title="Client-side report programming" href="../client_side_programming/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface/">Client side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/">Data programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Programming reports</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../templates/">Report templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../creating_report/">Creating a report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../report_parameters/">Report parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client_side_programming/">Client-side report programming</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Server-side report programming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Programming reports</a> &raquo;</li>
+      <li>Server-side report programming</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="server-side-report-programming">
+<h1>Server-side report programming<a class="headerlink" href="#server-side-report-programming" title="Permalink to this heading">¶</a></h1>
+<p>When a server gets a request from a client to generate report, it first of all
+creates a copy of the report and then this copy calls the
+<a class="reference internal" href="../../../refs/server/report/m_generate/"><span class="doc">generate</span></a>
+method.</p>
+<p>This method triggers the
+<a class="reference internal" href="../../../refs/server/report/on_before_generate/"><span class="doc">on_before_generate</span></a>
+event. In this event handler developer should write a code that generates the
+content of the report.</p>
+<p>For example for the <strong>invoice</strong> report of the Demo application this event is as
+follows:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_generate</span><span class="p">(</span><span class="n">report</span><span class="p">):</span>
+    <span class="n">invoices</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">invoices</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">report</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">invoices</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+
+    <span class="n">customer</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">display_text</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">invoices</span><span class="o">.</span><span class="n">customer</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">billing_address</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">city</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">billing_city</span><span class="o">.</span><span class="n">display_text</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">invoices</span><span class="o">.</span><span class="n">billing_state</span><span class="o">.</span><span class="n">display_text</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> \
+        <span class="n">invoices</span><span class="o">.</span><span class="n">billing_country</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">invoicedate</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">shipped</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">billing_address</span><span class="o">.</span><span class="n">display_text</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">invoices</span><span class="o">.</span><span class="n">billing_city</span><span class="o">.</span><span class="n">display_text</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> \
+        <span class="n">invoices</span><span class="o">.</span><span class="n">billing_state</span><span class="o">.</span><span class="n">display_text</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">invoices</span><span class="o">.</span><span class="n">billing_country</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">taxrate</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">taxrate</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">report</span><span class="o">.</span><span class="n">print_band</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+
+    <span class="n">tracks</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">invoice_table</span>
+    <span class="n">tracks</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tracks</span><span class="p">:</span>
+        <span class="n">quantity</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">display_text</span>
+        <span class="n">track</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">track</span><span class="o">.</span><span class="n">display_text</span>
+        <span class="n">unitprice</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">unitprice</span><span class="o">.</span><span class="n">display_text</span>
+        <span class="nb">sum</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">amount</span><span class="o">.</span><span class="n">display_text</span>
+        <span class="n">report</span><span class="o">.</span><span class="n">print_band</span><span class="p">(</span><span class="s1">&#39;detail&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+
+    <span class="n">subtotal</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">subtotal</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">tax</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">invoices</span><span class="o">.</span><span class="n">total</span><span class="o">.</span><span class="n">display_text</span>
+    <span class="n">report</span><span class="o">.</span><span class="n">print_band</span><span class="p">(</span><span class="s1">&#39;summary&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>First, we use the
+<a class="reference internal" href="../../../refs/server/item/m_copy/"><span class="doc">copy</span></a>
+method to create a copy of the invoices journal.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">invoices</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We create the copy because multiple users can simultaneously generate the same
+report in parallel threads.</p>
+<p>Then we call the set_where method of the copy:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">invoices</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">report</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where report.id.value is report id parameter, the value of which we set in the
+<a class="reference internal" href="../../../refs/client/report/on_before_print_report/"><span class="doc">on_before_print_report</span></a>
+event handler on the client and which is equal to the current <strong>id</strong> field
+value of the <strong>invoice</strong> journal.</p>
+<p>Then, using the
+<a class="reference internal" href="../../../refs/server/item/m_open/"><span class="doc">open</span></a>
+method, we obtain the records on the server. After that the
+<a class="reference internal" href="../../../refs/server/report/m_print_band/"><span class="doc">print_band</span></a>
+method is used to print title band:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">report</span><span class="o">.</span><span class="n">print_band</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>But before that we assign values to four local variables: customer, address,
+city and date that correspond to programmable cells in the title band in the
+report template.</p>
+<p>Then the same way we generate detail and summary bands.</p>
+<p>When the report is generated and the value of report
+<a class="reference internal" href="../../../refs/client/report/at_extension/"><span class="doc">extension</span></a>
+attribute, set on the client, is not equals ‘pdf’ the server converts the ods
+file using <strong>LibreOffice</strong>.</p>
+<p>Once the report is generated it is stored in a report folder of the static
+directory and the server sends the client the report file url.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../client_side_programming/" class="btn btn-neutral float-left" title="Client-side report programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../faq/" class="btn btn-neutral float-right" title="Jam.py FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating a project &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/intro/new_project.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Demo project" href="../demo_project/" />
+    <link rel="prev" title="Installation" href="../install/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Getting started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install/">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo_project/">Demo project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial01/">Tutorial. Part 1. First project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial02/">Tutorial. Part 2. File and image fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial03/">Tutorial. Part 3. Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../">Getting started</a> &raquo;</li>
+      <li>Creating a project</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-a-project">
+<h1>Creating a project<a class="headerlink" href="#creating-a-project" title="Permalink to this heading">¶</a></h1>
+<p>Create a new directory.</p>
+<p>Go into the directory and run from command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>jam-project.py
+</pre></div>
+</div>
+<p>The following files and folders will be created in the directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span>
+    <span class="n">css</span><span class="o">/</span>
+    <span class="n">js</span><span class="o">/</span>
+    <span class="n">img</span><span class="o">/</span>
+    <span class="n">reports</span><span class="o">/</span>
+    <span class="n">static</span><span class="o">/</span>
+    <span class="n">admin</span><span class="o">.</span><span class="n">sqlite</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">py</span>
+    <span class="n">index</span><span class="o">.</span><span class="n">html</span>
+    <span class="n">wsgi</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>To start the Jam.py web server run <code class="docutils literal notranslate"><span class="pre">server.py</span></code> script.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./server.py
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can specify a port as parameter, for example</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./server.py<span class="w"> </span><span class="m">8081</span>
+</pre></div>
+</div>
+<p>By default, the port is 8080. If you specify another port, you need to
+use it in your browser in the next steps.</p>
+</div>
+<p>Open a Web browser and go to “/builder.html” on your local domain – e.g.:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">127.0.0.1:8080/builder.html</span>
+</pre></div>
+</div>
+<p>You should see the language selection dialog. This defines the language used for the
+user interface. You can select the language from the list of default languages, or
+import your own, using the “folder” icon to the right of the input field. See the
+<a class="reference internal" href="../../admin/language_support/"><span class="doc">Language support</span></a> page for more information.
+Select your language and press the OK button.</p>
+<img alt="Jam.py language dialog" src="../../_images/lang.png" />
+<p>In the New project dialog box fill in:</p>
+<ul class="simple">
+<li><p><strong>Caption</strong> - the project name that will appear to users.</p></li>
+<li><p><strong>Name</strong> - the name of project (task) that will be used in the code (Python or JS)
+to get access to the task object. This should be a short and valid python identifier.
+This name is also used as a prefix when creating a table in the project database.</p></li>
+<li><p><strong>DB type</strong> - select a database type. If the database is not Sqlite, it must be
+created in advance and its attributes should be entered in the
+corresponding form fields.
+To see examples of Database setup, follow the <a class="reference internal" href="../../admin/project/database/"><span class="doc">link</span></a>.</p></li>
+</ul>
+<img alt="New project setup" class="align-center" src="../../_images/project_params.png" />
+<p>When you press OK, the connection to the database will be checked, and in case
+of failure      an error message will be displayed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note the following requirements:</p>
+<ul class="simple">
+<li><p>To use a <strong>FireBird</strong> database, the python <code class="docutils literal notranslate"><span class="pre">fdb</span></code> library must be installed.</p></li>
+<li><p><strong>PostgreSQL</strong> requires the <code class="docutils literal notranslate"><span class="pre">psycopg2</span></code> library.</p></li>
+<li><p><strong>MySQL</strong> requires the  <code class="docutils literal notranslate"><span class="pre">MySQLdb</span></code> for Python 2.x or <code class="docutils literal notranslate"><span class="pre">mysqlclient</span></code>  for Python 3.x.</p></li>
+<li><p><strong>Oracle</strong> requires the <code class="docutils literal notranslate"><span class="pre">cx_Oracle</span></code> library.</p></li>
+<li><p><strong>MSSQL</strong> requires the <code class="docutils literal notranslate"><span class="pre">pymssql</span></code> library.</p></li>
+<li><p>To generate reports, <strong>LibreOffice</strong> must be installed.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a <strong>SQLite</strong> database, when an item field is deleted or renamed, or foreign
+key is created,
+<a class="reference internal" href="../../admin/"><span class="doc">Application builder</span></a>,
+creates a new table and copies records from the old one into it.</p>
+<p>For <strong>SQLite</strong> database, Jam.py doesn’t support importing of metadata into an
+existing project (project with tables in the database).
+You can only import metadata into a new project.</p>
+</div>
+<p>If all goes well, a new project will be created and the project tree will appear
+in the Application builder.</p>
+<img alt="Jam.py Application builder" class="align-center" src="../../_images/adm_new_project.png" />
+<p>Now, to see the project itself, create a new page in the browser and type in the
+address bar:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">127.0.0.1:8080</span>
+</pre></div>
+</div>
+<img alt="Jam.py project" class="align-center" src="../../_images/empty_project.png" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../install/" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../demo_project/" class="btn btn-neutral float-right" title="Demo project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

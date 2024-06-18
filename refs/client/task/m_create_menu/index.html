@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>create_menu &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/refs/client/task/m_create_menu.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../search/" />
+    <link rel="next" title="init_tabs" href="../m_init_tabs/" />
+    <link rel="prev" title="close_tab" href="../m_close_tab/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../admin/">Business application builder</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../">Jam.py class reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../">Client side (javascript) class reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../abstractitem_api/">AbstractItem class</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../task_api/">Task class</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../task_api/#Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../task_api/#attributes">Attributes</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../task_api/#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../task_api/#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../item_group_api/">Group class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../item_api/">Item class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../detail_api/">Detail class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../report_group_api/">Reports class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../report_api/">Report class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../field_api/">Field class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../filter_api/">Filter class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server/">Server side (python) class reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../">Jam.py class reference</a> &raquo;</li>
+          <li><a href="../../">Client side (javascript) class reference</a> &raquo;</li>
+          <li><a href="../../task_api/">Task class</a> &raquo;</li>
+      <li>create_menu</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-menu">
+<h1>create_menu<a class="headerlink" href="#create-menu" title="Permalink to this heading">¶</a></h1>
+<dl class="js function">
+<dt class="sig sig-object js" id="create_menu-function">
+<span class="sig-name descname"><span class="n"><span class="pre">create_menu:</span> <span class="pre">function</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">menu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forms_container</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#create_menu-function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p><strong>domain</strong>: client</p>
+<p><strong>language</strong>: javascript</p>
+<p><strong>class</strong> <a class="reference internal" href="../../task_api/"><span class="doc">Task</span></a></p>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">create_menu</span></code> method created a menu based on the project
+<a class="reference internal" href="../../../../programming/task_tree/"><span class="doc">task tree</span></a>.</p>
+<p>If display forms in tabs attribute of the
+<a class="reference internal" href="../../../../admin/project/parameters/"><span class="doc">project parameters</span></a> is set, initializes
+tabs that will be created to display forms.</p>
+<p>It iterates through the items of the
+<a class="reference internal" href="../../../../programming/task_tree/"><span class="doc">task tree</span></a>
+and adds items to the menu for which the visible attribute is set to true,
+and the user has the right to view them.</p>
+<p>The method uses to assign on click event to the menu items so that for reports the
+<a class="reference internal" href="../../report/m_print/"><span class="doc">print</span></a>
+method will be executed when a user clicks it and the
+<a class="reference internal" href="../../item/m_view/"><span class="doc">view</span></a>
+method will be executed for other items.</p>
+<p>The following parameters could be passed to the method:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">menu</span></code> - a JQuery object of the menu element from index.html file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forms_container</span></code> a JQuery object of the element that will contain the forms
+created by the
+<a class="reference internal" href="../../item/m_view/"><span class="doc">view</span></a>
+method</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> - an object that can have the following attributes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_menu</span></code> - use this option to create a custom menu, see below for details</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">view_first</span></code> - if it is true the view form of the first item in the menu will
+be displayed after menu is created, the default value is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_single_group</span></code> - if it is true and only one group in the task tree
+has items the menu item for the group will be created that have a drop down
+menu for group items, otherwise the menuitems for each item will be created,
+the default value is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">splash_screen</span></code> - an html that will be displayed in the forms_container when
+all tabs are closed</p></li>
+</ul>
+</li>
+</ul>
+<section id="custom-menu-option">
+<h3>Custom menu option<a class="headerlink" href="#custom-menu-option" title="Permalink to this heading">¶</a></h3>
+<p>To create your own custom menu you must set a custom_menu option.</p>
+<p>This option is a list of menu objects, each object can be:</p>
+<ul class="simple">
+<li><p>Jam.py item or item group</p></li>
+<li><p>array: the first element of the array is the name of the menu item, and
+the second is the list of menu objects</p></li>
+<li><p>object with one attribute: the key of the attribute is the name of menu item
+and the value - a list of menu objects</p></li>
+<li><p>object with one attribute: the key of the attribute is the name of menu item
+and the value - function to be executed when the menu item is clicked</p></li>
+</ul>
+<p>To add a separator, an empty string (‘’) can be added to the list of menu objects</p>
+</section>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">task</span><span class="p">.</span><span class="nx">create_menu</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#menu&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">splash_screen</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;h1 class=&quot;text-center&quot;&gt;Jam.py Demo Application&lt;/h1&gt;&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">view_first</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>An example with custom menu:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">&#39;First&#39;</span><span class="p">,</span><span class="w">  </span><span class="p">[</span><span class="nx">task</span><span class="p">.</span><span class="nx">invoices</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">customers</span><span class="p">]],</span>
+<span class="w">        </span><span class="p">{</span><span class="s1">&#39;Second&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">task</span><span class="p">.</span><span class="nx">catalogs</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">reports</span><span class="p">]},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">Third</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">task</span><span class="p">.</span><span class="nx">tracks</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">Params</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;params clicked&#39;</span><span class="p">)}}]},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">Fourth</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">task</span><span class="p">.</span><span class="nx">task</span><span class="p">.</span><span class="nx">analytics</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;Artists list&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">task</span><span class="p">.</span><span class="nx">artists</span><span class="p">]}]},</span>
+<span class="w">        </span><span class="nx">task</span><span class="p">.</span><span class="nx">reports</span><span class="p">,</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">Params</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;params clicked&#39;</span><span class="p">)}},</span>
+<span class="w">    </span><span class="p">];</span>
+<span class="nx">task</span><span class="p">.</span><span class="nx">create_menu</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#menu&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">custom_menu</span><span class="o">:</span><span class="w"> </span><span class="nx">menu</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">splash_screen</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;h1 class=&quot;text-center&quot;&gt;Jam.py Demo Application&lt;/h1&gt;&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">view_first</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../m_close_tab/" class="btn btn-neutral float-left" title="close_tab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../m_init_tabs/" class="btn btn-neutral float-right" title="init_tabs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

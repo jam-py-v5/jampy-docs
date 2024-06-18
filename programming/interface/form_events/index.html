@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form events &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/interface/form_events.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Form options" href="../form_options/" />
+    <link rel="prev" title="Form templates" href="../form_templates/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Client side programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_html/">Index.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../initializing_application/">Initializing application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../forms/">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../form_templates/">Form templates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Form events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#close-query-events">Close query events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keydown-keyup-events">Keydown, keyup events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-other-events">All other events</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../form_options/">Form options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../form_examples/">Form examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_controls/">Data-aware controls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/">Data programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Client side programming</a> &raquo;</li>
+      <li>Form events</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="form-events">
+<h1>Form events<a class="headerlink" href="#form-events" title="Permalink to this heading">¶</a></h1>
+<p>After the form is created and the HTML form template is added to the DOM,
+the application triggers the following form events during the life cycle of
+the form:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">on_view_form_created</span></code> - the event is triggered when the form has been created but not shown yet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on_view_form_shown</span></code> -the event is triggered when the the form has been shown</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on_view_form_close_query</span></code> - the event is triggered when an attempt is made to close the form</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on_view_form_closed</span></code> - the event is triggered when the form has been closed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on_view_form_keydown</span></code> - the event is triggered when the keydown event occurs for the form</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on_view_form_keyup</span></code> - the event is triggered when the keyup event occurs for the form</p></li>
+</ul>
+<p>For other form types - edit, filter and param, replace ‘view’ with the form type,
+for example <code class="docutils literal notranslate"><span class="pre">on_edit_form_created</span></code> for edit form.</p>
+<p>We will first explain how to use the <code class="docutils literal notranslate"><span class="pre">on_view_form_created</span></code> event.</p>
+<p>When the user clicks on menu item the application executes the
+<a class="reference internal" href="../../../refs/client/item/m_view/"><span class="doc">view</span></a>
+method of corresponding task tree item, this method creates a form using its HTML
+form template and triggers first the
+<a class="reference internal" href="../../../refs/client/task/on_view_form_created/"><span class="doc">on_view_form_created</span></a> event of
+the task.</p>
+<p>When you create a new project, the task client module already contains the
+code, including the
+<a class="reference internal" href="../../../refs/client/task/on_view_form_created/"><span class="doc">on_view_form_created</span></a>
+event handler. This event handler is executed each time the view form is created
+and defines the default behavior of view forms.</p>
+<p>You can open the task client module to see this event handler.
+If you need to change the default behavior for all view forms of the project,
+you should do it here.</p>
+<p>Below we describe the major steps it performs:</p>
+<ul>
+<li><p>Initializes the
+<a class="reference internal" href="../../../refs/client/item/at_view_form/"><span class="doc">view_form</span></a>
+and
+<a class="reference internal" href="../../../refs/client/item/at_table_options/"><span class="doc">table_options</span></a>
+that are used by some methods when view form and table are created.</p></li>
+<li><p>Assigns JQuery event handlers for default buttons to methods of the item,
+depending on the user rights. In the example below the delete button is.
+Initialized:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">can_delete</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">view_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#delete-btn&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click.task&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">delete_record</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">view_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#delete-btn&quot;</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Executes the
+<a class="reference internal" href="../../../refs/client/group/on_view_form_created/"><span class="doc">on_view_form_created</span></a>
+event handler of the item group and.
+<a class="reference internal" href="../../../refs/client/item/on_view_form_created/"><span class="doc">on_view_form_created</span></a>
+of the item if they are defined:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">master</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">owner</span><span class="p">.</span><span class="nx">on_view_form_created</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">owner</span><span class="p">.</span><span class="nx">on_view_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">on_view_form_created</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">on_view_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creates a table to display the item data and tables for details if they have
+been specified by calling <code class="docutils literal notranslate"><span class="pre">create_view_tables</span></code> method</p></li>
+<li><p>Executes
+<a class="reference internal" href="../../../refs/client/item/m_open/"><span class="doc">open</span></a>
+method, that gets the item dataset from the server.</p></li>
+<li><p>Finally returns true to prevent calling of the <code class="docutils literal notranslate"><span class="pre">on_view_form_created</span></code> of the
+owner group and the item because the were already called see the
+<code class="docutils literal notranslate"><span class="pre">_process_event</span></code> method below.</p></li>
+</ul>
+<p>After we initialized buttons and before creating tables we call the
+<code class="docutils literal notranslate"><span class="pre">on_view_form_created</span></code> event handler of the item itself.</p>
+<p>For example, in the client module of the tracks item of the demo app
+the following
+<a class="reference internal" href="../../../refs/client/item/on_view_form_created/"><span class="doc">on_view_form_created</span></a>
+event handler is defined. In it we
+change the height attribute of the
+<a class="reference internal" href="../../../refs/client/item/at_table_options/"><span class="doc">table_options</span></a>
+, create the copy of the
+invoice_table set its attributes and call its
+<a class="reference internal" href="../../../refs/client/item/m_create_table/"><span class="doc">create_table</span></a>
+method that creates a table to display its data.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_view_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">item</span><span class="p">.</span><span class="nx">table_options</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">200</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">item</span><span class="p">.</span><span class="nx">invoice_table</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">invoice_table</span><span class="p">.</span><span class="nx">copy</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">item</span><span class="p">.</span><span class="nx">invoice_table</span><span class="p">.</span><span class="nx">paginate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">item</span><span class="p">.</span><span class="nx">invoice_table</span><span class="p">.</span><span class="nx">create_table</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">view_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.view-detail&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">summary_fields</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;total&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="nx">item</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Double-click the record in the bottom table to see track sales.&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The module also has the
+<a class="reference internal" href="../../../refs/client/item/on_after_scroll/"><span class="doc">on_after_scroll</span></a>
+event handler that will be executed when
+the user moves to the other track and will get the sales of this track.</p>
+<p>This example explains the principle of form events usage.</p>
+<p>The order of triggering of events depends on the type of event.</p>
+<p>There are three type of</p>
+<p>The order in which events are generated depends on the type of event.</p>
+<section id="close-query-events">
+<h2>Close query events<a class="headerlink" href="#close-query-events" title="Permalink to this heading">¶</a></h2>
+<p>When user tries to close the form the on_close_query event is first triggered
+(if defined) for the item.</p>
+<p>If the event handler returns true the application closes the form,
+else if the event handler returns false the application leaves the form open,
+otherwise the on_close_query event is triggered (if defined) the same way
+for the item group and then for the task.</p>
+<p>For example, by default there is the
+<a class="reference internal" href="../../../refs/client/item/on_edit_form_close_query/"><span class="doc">on_edit_form_close_query</span></a>
+event handler in the task client module:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_edit_form_close_query</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">virtual_table</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">is_changing</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">is_modified</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">item</span><span class="p">.</span><span class="nx">yes_no_cancel</span><span class="p">(</span><span class="nx">task</span><span class="p">.</span><span class="nx">language</span><span class="p">.</span><span class="nx">save_changes</span><span class="p">,</span>
+<span class="w">                </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">item</span><span class="p">.</span><span class="nx">apply_record</span><span class="p">();</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">item</span><span class="p">.</span><span class="nx">cancel_edit</span><span class="p">();</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">);</span>
+<span class="w">            </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">item</span><span class="p">.</span><span class="nx">cancel_edit</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code checks whether the record has been modified and then opens
+“Yes No Cancel” dialog.</p>
+<p>If we want to close the form without this dialog we can defined the following
+event handler in the client module of the item:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_edit_form_close_query</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">cancel</span><span class="p">()</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="keydown-keyup-events">
+<h2>Keydown, keyup events<a class="headerlink" href="#keydown-keyup-events" title="Permalink to this heading">¶</a></h2>
+<p>These events are triggered the same way as Close query events, starting from the item,
+but if the event handler returns true, the event handlers of the group and task
+are not executed.</p>
+<p>For example, by default there is the
+<a class="reference internal" href="../../../refs/client/item/on_edit_form_keyup/"><span class="doc">on_edit_form_keyup</span></a>
+event handler in the task client module:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_edit_form_keyup</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">13</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">ctrlKey</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">true</span><span class="p">){</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">edit_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#ok-btn&quot;</span><span class="p">).</span><span class="nx">focus</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">apply_record</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code saves the changes of the record to the database table when user
+presses Ctrl+Enter.</p>
+<p>Suppose we want to save the changes when user presses Enter. Then we write the
+following event handler in the item client module:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_edit_form_keyup</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">13</span><span class="p">){</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">edit_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#ok-btn&quot;</span><span class="p">).</span><span class="nx">focus</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">apply_record</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this case the event handler of the task won’t be called when the user press
+Enter.</p>
+</section>
+<section id="all-other-events">
+<h2>All other events<a class="headerlink" href="#all-other-events" title="Permalink to this heading">¶</a></h2>
+<p>For other events, the event handler of the task is called first, if it doesn’t
+return true, the event handler of the group is executed if it doesn’t
+return true the event handler of the item is called.</p>
+<p>This mechanism is implemented the <code class="docutils literal notranslate"><span class="pre">_process_event</span></code> method of the Item class in
+the <em>jam.js</em> module.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">_process_event</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">form_type</span><span class="p">,</span><span class="w"> </span><span class="nx">event_type</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;on_&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">form_type</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;_form_&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">event_type</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">can_close</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event_type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;close_query&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">can_close</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">master</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">can_close</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">can_close</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">can_close</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">task</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">can_close</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">task</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">can_close</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event_type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;keyup&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">event_type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;keydown&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">master</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">task</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">task</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">task</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">task</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">master</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">event</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">event</span><span class="p">].</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../form_templates/" class="btn btn-neutral float-left" title="Form templates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../form_options/" class="btn btn-neutral float-right" title="Form options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

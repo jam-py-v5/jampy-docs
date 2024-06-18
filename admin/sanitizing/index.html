@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanitizing &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/sanitizing.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Accept string" href="../accept_string/" />
+    <link rel="prev" title="Business application builder" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to/">How to</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Business application builder</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sanitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accept_string/">Accept string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project/">Project management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roles/">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_editor/">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../task/">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups/">Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../items/">Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/">Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup_lists/">Lookup List Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration_with_existing_database/">Intergation with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saving_history/">Saving audit trail/change history made by users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../record_locking/">Record locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../language_support/">Language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../language_translation/">Language translation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../">Business application builder</a> &raquo;</li>
+      <li>Sanitizing</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sanitizing">
+<h1>Sanitizing<a class="headerlink" href="#sanitizing" title="Permalink to this heading">¶</a></h1>
+<p>To prevent Cross Site Scripting (XSS) attacks, Jam.py sanitizes field values
+displayed in the table columns.</p>
+<p>For example, if field contains the following text:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&quot;<span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#39;color: red&#39;</span><span class="p">&gt;</span>USA<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>&quot;
+</pre></div>
+</div>
+<p>when un-sanitized, it will be displayed in the table column as follows:</p>
+<img alt="unsanitized.png" class="align-center" src="../../_images/unsanitized.png" />
+<p>When the field text is sanitized, it is transformed to the following:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&quot;<span class="ni">&amp;lt;</span>span style=&#39;color: red&#39;<span class="ni">&amp;gt;</span>USA<span class="ni">&amp;lt;</span>/span<span class="ni">&amp;gt;</span>&quot;
+</pre></div>
+</div>
+<p>as you can see symbols ‘&lt;’ and ‘&gt;’ are replaced with ‘&amp;lt;’ and ‘&amp;gt;’
+and the table column will be displayed this way:</p>
+<img alt="sanitized.png" class="align-center" src="../../_images/sanitized.png" />
+<p>There are two ways to prevent sanitizing.</p>
+<p>First is to set <strong>Do not sanitize</strong> attribute in the Interface tab in the
+<a class="reference internal" href="../items/field_editor_dialog/"><span class="doc">Field Editor Dialog</span></a></p>
+<img alt="do_not_sanitize.png" class="align-center" src="../../_images/fields_editr_interface.png" />
+<p>Second is to write the
+<a class="reference internal" href="../../refs/client/item/on_field_get_html/"><span class="doc">on_field_get_html</span></a>
+event handler. If the this event handler returns a value it is not sanitized.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Business application builder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../accept_string/" class="btn btn-neutral float-right" title="Accept string" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

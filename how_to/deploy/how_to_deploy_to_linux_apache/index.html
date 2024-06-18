@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to deploy jam-py app at Linux Apache http server? &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/how_to/deploy/how_to_deploy_to_linux_apache.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="How to do with Nginx with Gunicorn?" href="../how_to_do_with_gunicorn/" />
+    <link rel="prev" title="A step-by-step guide to deploy a Jam.py on the AWS" href="../a_step-by-step_guide_to_deploy_a_jam_py_on_the_aws/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">How to</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_install_on_windows/">How to install Jam.py on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_implement_a_many-to-many_relationship/">How to implement a many-to-many relationship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_migrate_development_to_production/">How to migrate development to production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_migrate_to_another_database/">How to migrate to another database</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">How to deploy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../how_to_deploy_project_on_pythonanywhere/">How to deploy project on PythonAnywhere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../a_step-by-step_guide_to_deploy_a_jam_py_on_the_aws/">A step-by-step guide to deploy a Jam.py on the AWS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to deploy jam-py app at Linux Apache http server?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how_to_do_with_gunicorn/">How to do with Nginx with Gunicorn?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../global_scripts/">How do I write functions which have a global scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_validate_field_value/">How to validate field value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_add_a_button_to_a_form/">How to add a button to a form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_execute_script_from_client/">How to execute script from client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_change_style_and_attributes_of_elements/">How to change style and attributes of form elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_create_a_custom_menu/">How to create a custom menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../to_append_a_record_without_view_form/">How to append a record using an edit form without opening a view form?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_prohibit_changing_record/">How to prohibit changing record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_link_two_tables/">How to link two tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_change_field_value_of_selected_records/">How change field value of selected records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_save_edit_form_without_closing_it/">How to save edit form without closing it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_save_changes_to_two_tables_in_same_transaction/">How to save changes to two tables in same transaction on the server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_prevent_duplicate_values/">How to prevent duplicate values in a table field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_multitenancy/">How to implement some sort of basic multi-tenancy? For example, to have users with separate data.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_use_jam_py_with_existing_database/">Can I use Jam.py with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_data_from_other_database_tables/">How can I use data from other database tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_request_from_other_application/">How I can process a request or get some data from other application or service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_calculations_in_the_background/">How can I perform calculations in the background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to_details_inside_details/">Is it supported to have details inside details?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../export_import_csv_files/">Export to / import from csv files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../authentication/">Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">How to</a> &raquo;</li>
+          <li><a href="../">How to deploy</a> &raquo;</li>
+      <li>How to deploy jam-py app at Linux Apache http server?</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-deploy-jam-py-app-at-linux-apache-http-server">
+<h1>How to deploy jam-py app at Linux Apache http server?<a class="headerlink" href="#how-to-deploy-jam-py-app-at-linux-apache-http-server" title="Permalink to this heading">¶</a></h1>
+<p>So basically deploying straight into the ie an cloud server with open 22, 80
+and 443 port. Prerequisite is a signed certificate for the DNS server name
+(YOUR_SERVER DNS entry from below). One can use a self signed, etc, not covering
+those. Also, Python installed and sudo access (or root for Linux).
+I have no idea at all about the MS Servers, sorry.</p>
+<p>The App is in read only mode. You can access admin.html page, but can’t change
+anything. Took me some fiddling with Google Cloud server, this is a micro Ubuntu
+instance, plain apache2 install with apt-get.</p>
+<ul>
+<li><p>Install wsgi module for Apache :</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">apt-get install libapache2-mod-wsgi</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Enable ssl, wsgi module for apache:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">a2enmod ssl wsgi</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a custom file for jam-py app, ie /etc/apache2/sites-available/test.conf,
+for example (still wip):</p>
+<div class="highlight-apache notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_ssl.c</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">YOUR_IP:443</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>YOUR_SERVER
+<span class="w">    </span><span class="nb">ServerAlias</span>
+<span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>YOUR_EMAIL
+<span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/test-error-sec.log
+<span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/test-access-sec.log<span class="w"> </span>combined
+
+<span class="w">    </span><span class="c">#below is for cx_Oracle</span>
+<span class="w">    </span><span class="nb">SetEnv</span><span class="w"> </span>LD_LIBRARY_PATH<span class="w"> </span><span class="sx">/u01/app/oracle/product/11.2.0/xe/lib</span>
+<span class="w">    </span><span class="nb">SetEnv</span><span class="w"> </span>ORACLE_SID<span class="w"> </span>XE
+<span class="w">    </span><span class="nb">SetEnv</span><span class="w"> </span>ORACLE_HOME<span class="w"> </span><span class="sx">/u01/app/oracle/product/11.2.0/xe</span>
+<span class="w">    </span><span class="c">#finish cx_Oracle</span>
+
+<span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html/simpleassets</span>
+
+<span class="w">    </span><span class="nb">SSLEngine</span><span class="w"> </span><span class="k">on</span>
+<span class="w">    </span><span class="nb">SSLCertificateFile</span><span class="w">  </span><span class="s2">&quot;/etc/ssl/private/your.crt&quot;</span>
+<span class="w">    </span><span class="nb">SSLCertificateKeyFile</span><span class="w">  </span><span class="s2">&quot;/etc/ssl/private/your.key&quot;</span>
+<span class="w">    </span><span class="nb">SSLCertificateChainFile</span><span class="w"> </span><span class="s2">&quot;/etc/ssl/private/your_chain.crt&quot;</span>
+<span class="w">    </span><span class="nb">SSLCACertificateFile</span><span class="w">   </span><span class="s2">&quot;/etc/ssl/private/your_CA.crt&quot;</span>
+
+<span class="w">    </span><span class="nb">WSGIDaemonProcess</span><span class="w">  </span>web<span class="w"> </span><span class="k">user</span>=www-data<span class="w"> </span><span class="k">group</span>=www-data<span class="w"> </span>processes=1<span class="w"> </span>threads=5
+<span class="w">    </span><span class="nb">WSGIScriptAlias</span><span class="w"> </span>/<span class="w"> </span><span class="sx">/var/www/html/simpleassets/wsgi.py</span>
+
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/html/simpleassets</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nb">Options</span><span class="w"> </span>+ExecCGI
+<span class="w">      </span><span class="nb">SetHandler</span><span class="w"> </span>wsgi-script
+<span class="w">      </span><span class="nb">AddHandler</span><span class="w"> </span>wsgi-script<span class="w"> </span>.py
+
+<span class="w">      </span><span class="nb">Order</span><span class="w"> </span>deny,allow
+<span class="w">      </span><span class="nb">Allow</span><span class="w"> </span>from<span class="w"> </span><span class="k">all</span>
+<span class="w">      </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+
+<span class="w">      </span><span class="nt">&lt;Files</span><span class="w"> </span><span class="s">wsgi.py</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nb">Order</span><span class="w"> </span>deny,allow
+<span class="w">        </span><span class="nb">Allow</span><span class="w"> </span>from<span class="w"> </span><span class="k">all</span>
+
+<span class="w">        </span><span class="c"># comment the following for ubuntu &lt;13</span>
+<span class="w">        </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<span class="w">      </span><span class="nt">&lt;/Files&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/html/simpleassets/static</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="c"># comment the following for ubuntu &lt; 13</span>
+<span class="w">      </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/VirtualHost&gt;</span>
+<span class="nt">&lt;/IfModule&gt;</span>
+</pre></div>
+</div>
+<p>The above file is using signed certificate your.crt with your.key, and CA,
+chain file obtained from CA. Please review resources on the net about
+certificates and the dns. You’ll need to obtain and copy those files
+in /etc/ssl/private folder. Change YOUR_xyz with your preference.</p>
+<p>The /var/www/html is the default Ubuntu folder for serving web pages.</p>
+</li>
+<li><p>Install jam-py as usual.</p>
+<p>I created the /var/www/html/simpleassets folder where unzipped jam-py
+SimpleAssets project. Follow procedure explained there how to deploy these:</p>
+<p>Basically, Export your project, save the zip file and copy it to your web
+hosting server desired folder. Copy admin.sqlite and your database as well
+(providing you’re using sqlite3 database). If using some other database ie
+mysql, you’ll need to export/import the database.</p>
+</li>
+<li><p>Enable test.conf  (the above file name with no extension):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">a2ensite test; systemctl restart apache2</span>
+</pre></div>
+</div>
+<p>That is it. At the moment, I’ve left port 80 as is, and jam-py is running only
+on https port. To debug problems, I would start with SeLinux or apparmor.
+With Ubuntu this might help:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo /etc/init.d/apparmor stop</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Now, here is the question of how to run TWO jam-py instances on one https server?</p>
+<p>One possible answer to this problem is the DNS. You might decide to set your
+DNS to ie second_instance.YOUR_SERVER name (the above live example would be
+jam2.research…).</p>
+<p>So the above test.conf file would be almost the same except YOUR_SERVER is now
+called second_instance.YOUR_SERVER</p>
+<p>The /etc/apache2/sites-available/test3.conf file:</p>
+<div class="highlight-apache notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_ssl.c</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">YOUR_IP:443</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>second_instance.YOUR_SERVER
+<span class="w">    </span><span class="nb">ServerAlias</span>
+<span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>YOUR_EMAIL
+<span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/test3-error-sec.log
+<span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/test3-access-sec.log<span class="w"> </span>combined
+<span class="w">    </span><span class="c">#below is for cx_Oracle</span>
+<span class="w">    </span><span class="nb">SetEnv</span><span class="w"> </span>LD_LIBRARY_PATH<span class="w"> </span><span class="sx">/u01/app/oracle/product/11.2.0/xe/lib</span>
+<span class="w">    </span><span class="nb">SetEnv</span><span class="w"> </span>ORACLE_SID<span class="w"> </span>XE
+<span class="w">    </span><span class="nb">SetEnv</span><span class="w"> </span>ORACLE_HOME<span class="w"> </span><span class="sx">/u01/app/oracle/product/11.2.0/xe</span>
+<span class="w">    </span><span class="c">#finish cx_Oracle</span>
+<span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html/simpleassets3</span>
+<span class="w">    </span><span class="nb">SSLEngine</span><span class="w"> </span><span class="k">on</span>
+<span class="w">    </span><span class="nb">SSLCertificateFile</span><span class="w">  </span><span class="s2">&quot;/etc/ssl/private/your.crt&quot;</span>
+<span class="w">    </span><span class="nb">SSLCertificateKeyFile</span><span class="w">  </span><span class="s2">&quot;/etc/ssl/private/your.key&quot;</span>
+<span class="w">    </span><span class="nb">SSLCertificateChainFile</span><span class="w"> </span><span class="s2">&quot;/etc/ssl/private/your_chain.crt&quot;</span>
+<span class="w">    </span><span class="nb">SSLCACertificateFile</span><span class="w">   </span><span class="s2">&quot;/etc/ssl/private/your_CA.crt&quot;</span>
+
+<span class="w">    </span><span class="nb">WSGIDaemonProcess</span><span class="w">  </span>assets3<span class="w"> </span><span class="k">user</span>=www-data<span class="w"> </span><span class="k">group</span>=www-data<span class="w"> </span>processes=1<span class="w"> </span>threads=5
+<span class="w">    </span><span class="nb">WSGIScriptAlias</span><span class="w"> </span>/<span class="w"> </span><span class="sx">/var/www/html/simpleassets3/wsgi.py</span>
+
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/html/simpleassets3</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nb">Options</span><span class="w"> </span>+ExecCGI
+<span class="w">      </span><span class="nb">SetHandler</span><span class="w"> </span>wsgi-script
+<span class="w">      </span><span class="nb">AddHandler</span><span class="w"> </span>wsgi-script<span class="w"> </span>.py
+
+<span class="w">      </span><span class="nb">Order</span><span class="w"> </span>deny,allow
+<span class="w">      </span><span class="nb">Allow</span><span class="w"> </span>from<span class="w"> </span><span class="k">all</span>
+<span class="w">      </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+
+<span class="w">      </span><span class="nt">&lt;Files</span><span class="w"> </span><span class="s">wsgi.py</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nb">Order</span><span class="w"> </span>deny,allow
+<span class="w">        </span><span class="nb">Allow</span><span class="w"> </span>from<span class="w"> </span><span class="k">all</span>
+
+<span class="w">        </span><span class="c"># comment the following for ubuntu &lt;13</span>
+<span class="w">        </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<span class="w">      </span><span class="nt">&lt;/Files&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/html/simpleassets3/static</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="c"># comment the following for ubuntu &lt; 13</span>
+<span class="w">      </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/VirtualHost&gt;</span>
+<span class="nt">&lt;/IfModule&gt;</span>
+</pre></div>
+</div>
+<p>The jam-py application second_instance lives now in ie /var/www/html/simpleassets3,
+and WSGIDaemonProcess is adjusted to new daemon, called assets3. Everything else
+is almost the same.</p>
+<p>This is possible because the SSL certificate is a * (star, or wildcard)
+certificate, enabling you to run multiple services on one DNS domain.</p>
+<p><em>This was initialy published by Dražen Babić on</em> <a class="reference external" href="https://github.com/jam-py/jam-py/issues/35">https://github.com/jam-py/jam-py/issues/35</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../a_step-by-step_guide_to_deploy_a_jam_py_on_the_aws/" class="btn btn-neutral float-left" title="A step-by-step guide to deploy a Jam.py on the AWS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../how_to_do_with_gunicorn/" class="btn btn-neutral float-right" title="How to do with Nginx with Gunicorn?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

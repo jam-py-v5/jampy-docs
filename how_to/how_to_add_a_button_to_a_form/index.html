@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to add a button to a form &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/how_to/how_to_add_a_button_to_a_form.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="How to execute script from client" href="../how_to_execute_script_from_client/" />
+    <link rel="prev" title="How to validate field value" href="../how_to_validate_field_value/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">How to</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../how_to_install_on_windows/">How to install Jam.py on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_implement_a_many-to-many_relationship/">How to implement a many-to-many relationship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_migrate_development_to_production/">How to migrate development to production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_migrate_to_another_database/">How to migrate to another database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deploy/">How to deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../global_scripts/">How do I write functions which have a global scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_validate_field_value/">How to validate field value</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to add a button to a form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_execute_script_from_client/">How to execute script from client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_change_style_and_attributes_of_elements/">How to change style and attributes of form elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_create_a_custom_menu/">How to create a custom menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../to_append_a_record_without_view_form/">How to append a record using an edit form without opening a view form?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_prohibit_changing_record/">How to prohibit changing record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_link_two_tables/">How to link two tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_change_field_value_of_selected_records/">How change field value of selected records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_save_edit_form_without_closing_it/">How to save edit form without closing it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_save_changes_to_two_tables_in_same_transaction/">How to save changes to two tables in same transaction on the server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_prevent_duplicate_values/">How to prevent duplicate values in a table field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_multitenancy/">How to implement some sort of basic multi-tenancy? For example, to have users with separate data.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_use_jam_py_with_existing_database/">Can I use Jam.py with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_data_from_other_database_tables/">How can I use data from other database tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_request_from_other_application/">How I can process a request or get some data from other application or service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_calculations_in_the_background/">How can I perform calculations in the background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_to_details_inside_details/">Is it supported to have details inside details?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../export_import_csv_files/">Export to / import from csv files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../authentication/">Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../">How to</a> &raquo;</li>
+      <li>How to add a button to a form</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-add-a-button-to-a-form">
+<h1>How to add a button to a form<a class="headerlink" href="#how-to-add-a-button-to-a-form" title="Permalink to this heading">¶</a></h1>
+<p>The simplest way to add a button to an edit / view from is to use
+<a class="reference internal" href="../../refs/client/item/m_add_edit_button/"><span class="doc">add_edit_button</span></a> /
+<a class="reference internal" href="../../refs/client/item/m_add_view_button/"><span class="doc">add_view_button</span></a>
+correspondingly. You can call this functions in the
+<a class="reference internal" href="../../refs/client/item/on_edit_form_created/"><span class="doc">on_edit_form_created</span></a> /
+<a class="reference internal" href="../../refs/client/item/on_view_form_created/"><span class="doc">on_view_form_created</span></a>
+event handlers.</p>
+<p>For example the Customers item uses this code in its client module to add
+buttons to a view form:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_view_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">table_options</span><span class="p">.</span><span class="nx">multiselect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">lookup_field</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">print_btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">add_view_button</span><span class="p">(</span><span class="s1">&#39;Print&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">image</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;icon-print&#39;</span><span class="p">}),</span>
+<span class="w">            </span><span class="nx">email_btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">add_view_button</span><span class="p">(</span><span class="s1">&#39;Send email&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">image</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;icon-pencil&#39;</span><span class="p">});</span>
+<span class="w">        </span><span class="nx">email_btn</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">send_email</span><span class="p">()</span><span class="w"> </span><span class="p">});</span>
+<span class="w">        </span><span class="nx">print_btn</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">print</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">});</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">table_options</span><span class="p">.</span><span class="nx">multiselect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this code the item’s
+<a class="reference internal" href="../../refs/client/item/at_lookup_field/"><span class="doc">lookup_field</span></a>
+attribute is checked and if it is defined (the view form is not created to select a
+value for a lookup field) the two buttons are created and for them JQuery click
+events are assigned to <code class="docutils literal notranslate"><span class="pre">send_email</span></code> and <code class="docutils literal notranslate"><span class="pre">print</span></code> functions declared in that
+module.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../how_to_validate_field_value/" class="btn btn-neutral float-left" title="How to validate field value" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../how_to_execute_script_from_client/" class="btn btn-neutral float-right" title="How to execute script from client" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item class &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/refs/client/item_api.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="active" href="../item/at_active/" />
+    <link rel="prev" title="on_view_form_shown" href="../group/on_view_form_shown/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py class reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../">Client side (javascript) class reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../abstractitem_api/">AbstractItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task_api/">Task class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../item_group_api/">Group class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Item class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Item"><code class="docutils literal notranslate"><span class="pre">Item</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes-and-properties">Attributes and properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../detail_api/">Detail class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../report_group_api/">Reports class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../report_api/">Report class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../field_api/">Field class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filter_api/">Filter class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side (python) class reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py class reference</a> &raquo;</li>
+          <li><a href="../">Client side (javascript) class reference</a> &raquo;</li>
+      <li>Item class</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="item-class">
+<h1>Item class<a class="headerlink" href="#item-class" title="Permalink to this heading">¶</a></h1>
+<dl class="js class">
+<dt class="sig sig-object js" id="Item">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">Item</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p><strong>domain</strong>: client</p>
+<p><strong>language</strong>: javascript</p>
+<p>Item class is used to create item objects of the
+<a class="reference internal" href="../../../programming/task_tree/"><span class="doc">task tree</span></a> that may have an associated database
+table.</p>
+<p>Below the attributes, methods and events of the class are listed.</p>
+<p>It, as well, inherits attributes and methods of its ancestor class
+<a class="reference internal" href="../abstractitem_api/"><span class="doc">AbstractItem class</span></a></p>
+<section id="attributes-and-properties">
+<h2>Attributes and properties<a class="headerlink" href="#attributes-and-properties" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_active/">active</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_can_modify/">can_modify</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_details/">details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_edit_form/">edit_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_edit_options/">edit_options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_fields/">fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_filter_form/">filter_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_filter_options/">filter_options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_filtered/">Filtered</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_filters/">filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_item_state/">item_state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_log_changes/">log_changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_lookup_field/">lookup_field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_paginate/">paginate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_permissions/">permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_read_only/">read_only</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_rec_count/">rec_count</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_rec_no/">rec_no</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_selections/">selections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_table_options/">table_options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_view_form/">view_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_view_options/">view_options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/at_virtual_table/">virtual_table</a></li>
+</ul>
+</div>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_add_edit_button/">add_edit_button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_add_view_button/">add_view_button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_append/">append</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_append_record/">append_record</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_apply/">apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_apply_record/">apply_record</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_assign_filters/">assign_filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_bof/">bof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_calc_summary/">calc_summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_can_create/">can_create</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_can_delete/">can_delete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_can_edit/">can_edit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_cancel/">cancel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_cancel_edit/">cancel_edit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_clear_filters/">clear_filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_clone/">clone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_close/">close</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_close_edit_form/">close_edit_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_close_filter_form/">close_filter_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_close_view_form/">close_view_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_copy/">copy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_create_detail_views/">create_detail_views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_create_edit_form/">create_edit_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_create_filter_form/">create_filter_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_create_filter_inputs/">create_filter_inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_create_inputs/">create_inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_create_table/">create_table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_create_view_form/">create_view_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_delete/">delete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_delete_record/">delete_record</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_disable_controls/">disable_controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_disable_edit_form/">disable_edit_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_each/">each</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_each_detail/">each_detail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_each_field/">each_field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_each_filter/">each_filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_edit/">edit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_edit_record/">edit_record</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_enable_controls/">enable_controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_enable_edit_form/">enable_edit_form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_eof/">eof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_field_by_name/">field_by_name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_filter_by_name/">filter_by_name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_first/">first</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_insert/">insert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_insert_record/">insert_record</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_is_changing/">is_changing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_is_editing/">is_edited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_is_modified/">is_modified</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_is_new/">is_new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_last/">last</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_locate/">locate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_next/">next</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_open/">open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_post/">post</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_prior/">prior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_record_count/">record_count</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_refresh_page/">refresh_page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_refresh_record/">refresh_record</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_search/">search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_select_records/">select_records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_set_fields/">set_fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_set_order_by/">set_order_by</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_set_where/">set_where</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_show_history/">show_history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_update_controls/">update_controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/m_view/">view</a></li>
+</ul>
+</div>
+</section>
+<section id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_append/">on_after_append</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_apply/">on_after_apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_cancel/">on_after_cancel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_delete/">on_after_delete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_edit/">on_after_edit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_open/">on_after_open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_post/">on_after_post</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_after_scroll/">on_after_scroll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_append/">on_before_append</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_apply/">on_before_apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_cancel/">on_before_cancel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_delete/">on_before_delete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_edit/">on_before_edit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_field_changed/">on_before_field_changed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_open/">on_before_open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_post/">on_before_post</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_before_scroll/">on_before_scroll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_detail_changed/">on_detail_changed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_edit_form_close_query/">on_edit_form_close_query</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_edit_form_created/">on_edit_form_created</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_edit_form_keydown/">on_edit_form_keydown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_edit_form_keyup/">on_edit_form_keyup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_edit_form_shown/">on_edit_form_shown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_field_changed/">on_field_changed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_field_get_html/">on_field_get_html</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_field_select_value/">on_field_select_value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_field_validate/">on_field_validate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_filter_changed/">on_filter_changed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_filter_form_close_query/">on_filter_form_close_query</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_filter_form_created/">on_filter_form_created</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_filter_form_shown/">on_filter_form_shown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_filter_record/">on_filter_record</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_filters_applied/">on_filters_applied</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_get_field_text/">on_field_get_text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_view_form_close_query/">on_view_form_close_query</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_view_form_created/">on_view_form_created</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_view_form_keydown/">on_view_form_keydown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_view_form_keyup/">on_view_form_keyup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../item/on_view_form_shown/">on_view_form_shown</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../group/on_view_form_shown/" class="btn btn-neutral float-left" title="on_view_form_shown" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../item/at_active/" class="btn btn-neutral float-right" title="active" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

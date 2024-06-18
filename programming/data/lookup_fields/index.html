@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lookup fields &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/data/lookup_fields.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Filtering records" href="../filtering_records/" />
+    <link rel="prev" title="Common fields" href="../common_fields/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface/">Client side programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Data programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../dataset/">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../navigating_datasets/">Navigating datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modifying_datasets/">Modifying datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fields/">Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_fields/">Common fields</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lookup fields</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lookup-item-based-lookup-field">Lookup item based lookup field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value-list">Value list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../filtering_records/">Filtering records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../details/">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Data programming</a> &raquo;</li>
+      <li>Lookup fields</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lookup-fields">
+<h1>Lookup fields<a class="headerlink" href="#lookup-fields" title="Permalink to this heading">¶</a></h1>
+<p>A lookup field can display a user friendly value that is bound to another value
+in the another table or value list. For example, the lookup field can
+display a customer name that is bound to a respective customer ID number in
+another item’s table or list.</p>
+<p>When entering a value in the lookup field the user chooses from a list of values.
+This can make data entry quicker and more accurate.</p>
+<p>The two types of lookup fields that you can create are a lookup field,
+based on lookup item, and a value list.</p>
+<section id="lookup-item-based-lookup-field">
+<h2>Lookup item based lookup field<a class="headerlink" href="#lookup-item-based-lookup-field" title="Permalink to this heading">¶</a></h2>
+<p>In the framework you can add a field to an item to look up information in another
+item’s table. For example in the Demo application <strong>Albums</strong> catalog there is the
+<strong>Artist</strong> lookup field.</p>
+<img alt="albums_edit_form.png" class="align-center" src="../../../_images/albums_edit_form.png" />
+<p>To set the value of the field the user must click on the button to the right of the
+field input and select a record from the ‘’Artists’’ catalog that will appear.
+Then the value of this field will be the id of the record.
+The other way to set value of the field is to use typeahead, if <strong>Typeahead</strong>
+flag is set in the
+<a class="reference internal" href="../../../admin/items/field_editor_dialog/"><span class="doc">Field Editor Dialog</span></a>:</p>
+<img alt="Lookup field" class="align-center" src="../../../_images/artist_field.png" />
+<p>For such fields <strong>Lookup item</strong> and <strong>Lookup field</strong> must be specified in the
+<a class="reference internal" href="../../../admin/items/field_editor_dialog/"><span class="doc">Field Editor Dialog</span></a>:</p>
+<p>The SQL query that is generated on the server, when the <code class="docutils literal notranslate"><span class="pre">open</span></code> method is called
+and <code class="docutils literal notranslate"><span class="pre">expanded</span></code> parameter is set to true (default), uses <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> clause to
+get lookup values for such fields. Thus each such field has a pair of values:
+the first value stores a reference to a record in the lookup item table (the value
+of its primary key field), and the second value have the value of the lookup
+field in this record.</p>
+<p>To get access to this values use the following properties of lookup fields:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Client</p></th>
+<th class="head"><p>Server</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../refs/client/field/at_value/"><span class="doc">value</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_value/"><span class="doc">value</span></a></p></td>
+<td><p>A value, that is stored in the item table, that is a reference to a record in the lookup item table.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../refs/client/field/at_lookup_value/"><span class="doc">lookup_value</span></a></p></td>
+<td><p><a class="reference internal" href="../../../refs/server/field/at_lookup_value/"><span class="doc">lookup_value</span></a></p></td>
+<td><p>A value of the lookup field in the lookup item table.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Sometimes there is a need to have two or more values from the same record in the
+lookup item table. For example, the “”Invoices” journal in Demo has several
+lookup fields (“Customer”, “Billing Address”, “Billing City”, and so on)
+that have information about a customer, all stored in one record in the
+“Customers” item table, describing that customer. In order to avoid creating
+unnecessary fields in the “Invoices” item table, storing the same reference
+to a record, and creating <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> s for each such field, all lookup fields
+except “Customers” have <strong>Master field</strong> value pointing to the “Customers”
+field. These fields don’t have corresponding fields in the items’ underlying
+database table. Their value property is always equal to the value property of
+the master field and the SQL query that is generated on the server, when the
+open method is called, uses one <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> clause for all this fields.</p>
+<img alt="Master field example" class="align-center" src="../../../_images/master_field_example.png" />
+<p>When user clicks on the button to the right of the field input or uses typeahead,
+the application creates a copy of the lookup item of the field, sets its
+<a class="reference internal" href="../../../refs/client/item/at_lookup_field/"><span class="doc">lookup_field</span></a>
+attribute to the field. and
+triggers
+<a class="reference internal" href="../../../refs/client/item/on_field_select_value/"><span class="doc">on_field_select_value</span></a>
+event. Write this event handler to specify fields that will be displayed,
+set up filters for the lookup item, before it will be opened and displayed for
+a user to select a value for the field.</p>
+<p>The lookup field in the lookup item can also be a lookup field, for example:</p>
+<img alt="tracks_lookup_field.png" class="align-center" src="../../../_images/tracks_lookup_field.png" />
+<p>To set up such a field use <strong>Lookup field 2</strong> and <strong>Lookup field 3</strong> attributes.</p>
+</section>
+<section id="value-list">
+<h2>Value list<a class="headerlink" href="#value-list" title="Permalink to this heading">¶</a></h2>
+<p>Sometimes a source of a lookup field can be defined as a value list. For
+example, a <strong>MediaType</strong> field in the <strong>Tracks</strong> catalog of the
+<a class="reference internal" href="../../../intro/demo_project/"><span class="doc">Demo project</span></a> has a <strong>Lookup value list</strong> attribute set
+to the MediaTypes lookup list:</p>
+<img alt="MediaType field definition" class="align-center" src="../../../_images/mediatype_field.png" />
+<p>Use the <a class="reference internal" href="../../../admin/lookup_lists/"><span class="doc">Lookup List Dialog</span></a> of the task to define
+such lookup lists.</p>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../intro/tutorial01/lookup_fields/"><span class="doc">Lookup fields</span></a></p>
+<p><a class="reference internal" href="../../../intro/tutorial01/lookup_list/"><span class="doc">Lookup lists</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../common_fields/" class="btn btn-neutral float-left" title="Common fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../filtering_records/" class="btn btn-neutral float-right" title="Filtering records" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

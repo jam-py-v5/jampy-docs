@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lookup lists &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/intro/tutorial01/lookup_list.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Customizing Forms" href="../customizing_forms/" />
+    <link rel="prev" title="Lookup fields" href="../lookup_fields/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Getting started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../install/">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_project/">Creating a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demo_project/">Demo project</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Tutorial. Part 1. First project</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../new_project/">New project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../new_catalog/">New catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_fields/">Lookup fields</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lookup lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../customizing_forms/">Customizing Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indexes/">Indexes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/">Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial02/">Tutorial. Part 2. File and image fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial03/">Tutorial. Part 3. Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Getting started</a> &raquo;</li>
+          <li><a href="../">Tutorial. Part 1. First project</a> &raquo;</li>
+      <li>Lookup lists</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lookup-lists">
+<h1>Lookup lists<a class="headerlink" href="#lookup-lists" title="Permalink to this heading">¶</a></h1>
+<p>Now we create a
+<a class="reference internal" href="../../../admin/lookup_lists/"><span class="doc">lookup List</span></a>
+“Status”.  Lookup lists are used to create “dropdown” field, with a limited
+set of possible values.</p>
+<p>Select the “Task” node in the project tree and click the <strong>Lookup lists</strong> button.</p>
+<img alt="Lookup lists" class="align-center" src="../../../_images/lookup_lists1.png" />
+<p>It is initially empty. Click the <strong>New</strong> button to create a new list.
+Specify the new lookup list name and add a list of integer-text pairs:</p>
+<img alt="Lookup list entries" class="align-center" src="../../../_images/lookup_list_ready.png" />
+<p>Save the Lookup Lists with the <strong>OK</strong> button, then edit the “Contacts” journal
+to add the new “Status” field.</p>
+<img alt="Status field" class="align-center" src="../../../_images/status_field.png" />
+<p>As for lookup fields, set the caption and name and leave the type empty. Then go to
+the <strong>Lookup</strong> tab, and set the <strong>Lookup value list</strong> attribute to the “Status” lookup list:</p>
+<img alt="Status lookup field" class="align-center" src="../../../_images/status_lookup.png" />
+<p>Finally, before saving, open the “Customer” field we created earlier,
+and set the <strong>Required</strong> attribute (in the “Field” tab) and the <strong>Typeahead</strong> attribute
+(in the “Lookup” tab). When the <strong>Typeahead</strong> is checked, autocompletion/typeahead is
+enabled for the lookup field.</p>
+<img alt="Customer attributes" class="align-center" src="../../../_images/customer_required_attr.png" />
+<img alt="Customer typeahead attribute" class="align-center" src="../../../_images/customer_typeahead_attr.png" />
+<p>While we are here, set <strong>Default value</strong> of the “Contact date” field to “CURRENT DATETIME”,
+so that the date will be automatically initialised to the current date and time.</p>
+<img alt="Contact date field default value" class="align-center" src="../../../_images/contact_date_default_value.png" />
+<p>We can likewise select a <strong>Default value</strong> for the “Status” field, by selecting a value
+in the drop-down lists.</p>
+<img alt="Status field default value" class="align-center" src="../../../_images/status_default_value.png" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../lookup_fields/" class="btn btn-neutral float-left" title="Lookup fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../customizing_forms/" class="btn btn-neutral float-right" title="Customizing Forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

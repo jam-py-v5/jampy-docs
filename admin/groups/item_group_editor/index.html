@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item Group Editor &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/groups/item_group_editor.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Report Group Editor" href="../report_group_editor/" />
+    <link rel="prev" title="Groups" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Business application builder</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../sanitizing/">Sanitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accept_string/">Accept string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../project/">Project management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../roles/">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../users/">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code_editor/">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../task/">Task</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Groups</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Item Group Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../report_group_editor/">Report Group Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../table_group_editor/">Detail Group Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../items/">Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../details/">Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lookup_lists/">Lookup List Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration_with_existing_database/">Intergation with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../saving_history/">Saving audit trail/change history made by users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../record_locking/">Record locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_support/">Language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_translation/">Language translation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Business application builder</a> &raquo;</li>
+          <li><a href="../">Groups</a> &raquo;</li>
+      <li>Item Group Editor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="item-group-editor">
+<h1>Item Group Editor<a class="headerlink" href="#item-group-editor" title="Permalink to this heading">¶</a></h1>
+<p><strong>Item Group Editor</strong> opens when a developer wants to create a new item group or
+modify an existing one. See
+<a class="reference internal" href="../../../programming/task_tree/"><span class="doc">Task tree</span></a></p>
+<p>The upper part of the <strong>Item Group Editor</strong> have the following fields:</p>
+<ul class="simple">
+<li><p><strong>Caption</strong> - the group name that appears to users.</p></li>
+<li><p><strong>Name</strong> - the name of the group that will be used in programming code to
+get access to the group object. It should be unique in the project and should
+be a valid python identifier.</p></li>
+<li><p><strong>Visible</strong> - use this checkbox to set group’s visible attribute. The value of
+this attribute can be used in code on the client to create menu items and so
+on.</p></li>
+<li><p><strong>Primary key field</strong> - by clicking on the button to the right of this
+attribute you can specify the common primary key field for items that the group
+will own. You have to create this field first, see below</p></li>
+<li><p><strong>Deleted flag field</strong> - by clicking on the button to the right of this
+attribute you can specify the common field that will serve as a deleted flag
+for items that the group will own. You have to create this field first, see below</p></li>
+</ul>
+<p>In the center part of the <strong>Item Group Editor</strong> dialog there is a table
+containing a list of fields, defined for the item. These fields are
+<a class="reference internal" href="../../../programming/data/common_fields/"><span class="doc">common</span></a>
+to all items the group will own.</p>
+<p>To add, modify or delete a field use the following buttons:</p>
+<ul class="simple">
+<li><p><strong>New</strong> - click the button to invoke the
+<a class="reference internal" href="../../items/field_editor_dialog/"><span class="doc">Field Editor Dialog</span></a>
+to create a new field.</p></li>
+<li><p><strong>Edit</strong> - click the button to invoke the
+<a class="reference internal" href="../../items/field_editor_dialog/"><span class="doc">Field Editor Dialog</span></a>
+to modify a selected field.</p></li>
+<li><p><strong>Delete</strong> - click the button to delete a field selected in in the field list.</p></li>
+</ul>
+<p>In the bottom-right corner of the Dialog form there are two buttons:</p>
+<ul class="simple">
+<li><p><strong>OK</strong> - click the button to save change you made.</p></li>
+<li><p><strong>Cancel</strong> - click the buttons to cancel the operation.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can create new or modify existing fields and set <strong>Primary key field</strong>
+and <strong>Deleted flag field</strong> attributes only when creating a new group or
+editing an empty one.</p>
+<p>For existing item groups, that already own items you can only change
+<strong>Caption</strong>, <strong>Name</strong> and  <strong>Visible</strong> attributes.</p>
+</div>
+<img alt="Item Group Editor" class="align-center" src="../../../_images/item_group.png" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Groups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../report_group_editor/" class="btn btn-neutral float-right" title="Report Group Editor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

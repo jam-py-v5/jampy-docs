@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/workflow.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Working with modules" href="../modules/" />
+    <link rel="prev" title="Task tree" href="../task_tree/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../task_tree/">Task tree</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#video">Video</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/">Client side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/">Data programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../">Jam.py programming</a> &raquo;</li>
+      <li>Workflow</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="workflow">
+<h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this heading">¶</a></h1>
+<p>In the Jam.py framework, two tasks work at the same time: the Application builder
+and the Project.
+Each of them represents a tree of objects - there is the Application builder task
+tree and the Project task tree. Therefore, before considering the Jam.py workflow,
+you need to familiarize yourself with the concept of the
+<a class="reference internal" href="../task_tree/"><span class="doc">task tree</span></a>.</p>
+<p>The the Jam.py workflow is the following:</p>
+<ul class="simple">
+<li><p>When server.py is run it creates WSGI application that, in its own turn,
+creates the Application builder task tree.</p></li>
+<li><p>The Project task tree is created on the server by Application builder after the
+server receives first request from the Project client. To do so, the
+Application builder uses metadata stored in admin.sqlite database in the root folder
+of the project. After creating a task tree the server application triggers the
+<a class="reference internal" href="../../refs/server/task/on_created/"><span class="doc">on_created</span></a>
+event, that can be used to initialize the server task tree.</p></li>
+<li><p>When an application on the client (Application builder or Project) is first run in
+the browser (after <code class="docutils literal notranslate"><span class="pre">builder.html</span></code> or <code class="docutils literal notranslate"><span class="pre">index.html</span></code> have been loaded) the
+empty task object is built that sends to the server a request to initialize
+itself.</p></li>
+<li><p>If the project
+<a class="reference internal" href="../../admin/project/parameters/"><span class="doc">safe mode</span></a>
+parameter is set, the framework checks if a user is logged, before executing
+any request. If not, then the
+application on the client creates a login form, and after the user inputs its
+login and password, the client task sends the server a request to login.</p></li>
+<li><p>After successful login or if the project
+<a class="reference internal" href="../../admin/project/parameters/"><span class="doc">safe mode</span></a>
+parameter is not set, the server sends the client information about the
+requested task. The task on the client builds its tree, based on this
+information, assigns event handlers to its objects and executes
+<a class="reference internal" href="../../refs/client/task/on_page_loaded/"><span class="doc">on_page_loaded</span></a>
+event handler.</p></li>
+<li><p>In this event handler a developer should attach JQuery event handler
+functions to HTML elements of the DOM, defined in the <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file.
+In these functions a developer can use methods of items of the
+<a class="reference internal" href="../task_tree/"><span class="doc">task tree</span></a>
+to perform some specific tasks.
+These methods, when executed, trigger different events in which other methods
+could be called and so on. See
+<a class="reference internal" href="../interface/"><span class="doc">Client side programming</span></a>.</p></li>
+<li><p>Items of the task tree, that have corresponding database tables, have methods
+to read and write data in the server database. See
+<a class="reference internal" href="../data/"><span class="doc">Data programming</span></a>.</p></li>
+<li><p>The report items generate the reports on the server, based on the LibrOffice
+templates. See
+<a class="reference internal" href="../reports/"><span class="doc">Programming reports</span></a>.</p></li>
+<li><p>All the items, whose methods generate a request to the server, do it the
+following way: they call the method of the task that sends to the server the
+<a class="reference internal" href="../../refs/client/abstr_item/at_id/"><span class="doc">ID</span></a>
+of the task, the
+<a class="reference internal" href="../../refs/client/abstr_item/at_id/"><span class="doc">ID</span></a>
+the item, the type of the request and its parameters.
+The server on receiving the request, based on passed IDs, finds the task
+(it can be Project task or Application builder task) and the item on the server,
+executes the corresponding method with passed parameters and returns the result
+of the execution to the client. These server methods could trigger their own
+events that can override the default behavior. See
+<a class="reference internal" href="../server/"><span class="doc">Server side programming</span></a></p></li>
+</ul>
+<section id="video">
+<h2>Video<a class="headerlink" href="#video" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://youtu.be/DY463lcv0R4">Form events</a> and <a class="reference external" href="https://youtu.be/nLOhdA2FX0I">Client-server interactions</a> video tutorials illustrate
+the workflow of Jam.py project.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../task_tree/" class="btn btn-neutral float-left" title="Task tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../modules/" class="btn btn-neutral float-right" title="Working with modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

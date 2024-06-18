@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Items &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/items/index.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Item Editor Dialog" href="item_editor_dialog/" />
+    <link rel="prev" title="Detail Group Editor" href="../groups/table_group_editor/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to/">How to</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Business application builder</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sanitizing/">Sanitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accept_string/">Accept string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project/">Project management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roles/">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_editor/">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../task/">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups/">Groups</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="item_editor_dialog/">Item Editor Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="field_editor_dialog/">Field Editor Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edit_form_dialog/">Edit Form Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view_form_dialog/">View Form Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters_dialog/">Filters Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="details_dialog/">Details Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="order_dialog/">Order Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indices_dialog/">Indices Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="foreign_keys_dialog/">Foreign Keys Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reports_dialog/">Reports Dialog</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../details/">Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup_lists/">Lookup List Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration_with_existing_database/">Intergation with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saving_history/">Saving audit trail/change history made by users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../record_locking/">Record locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../language_support/">Language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../language_translation/">Language translation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../">Business application builder</a> &raquo;</li>
+      <li>Items</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="items">
+<h1>Items<a class="headerlink" href="#items" title="Permalink to this heading">¶</a></h1>
+<p>Select a group node in the project tree to get access to items that this
+group owns, see
+<a class="reference internal" href="../../programming/task_tree/"><span class="doc">Task tree</span></a>.</p>
+<p>At the bottom of the page there are 3 buttons:</p>
+<ul class="simple">
+<li><p><strong>New</strong> - click on New to create a new item in the
+<a class="reference internal" href="item_editor_dialog/"><span class="doc">Item Editor Dialog</span></a></p></li>
+<li><p><strong>Edit</strong> - use this button to modify item’s attributes as well to add, change
+or delete fields in the
+<a class="reference internal" href="item_editor_dialog/"><span class="doc">Item Editor Dialog</span></a></p></li>
+<li><p><strong>Delete</strong> - click on the button to delete an item and its underlying database
+table.</p></li>
+</ul>
+<p>You can use the up and down arrows to arrange the items in the list. This may be
+useful for creating a menu or display it in some way on the web page.</p>
+<p>The right panel of the page have following buttons:</p>
+<ul class="simple">
+<li><p><strong>Client module</strong> - click on this button to open the
+<a class="reference internal" href="../code_editor/"><span class="doc">Code editor</span></a>
+to edit client module of an item, see
+<a class="reference internal" href="../../programming/modules/"><span class="doc">Working with modules</span></a>.</p></li>
+<li><p><strong>Server module</strong>     - click on this button to open the
+<a class="reference internal" href="../code_editor/"><span class="doc">Code editor</span></a>
+to edit server module of an item, see
+<a class="reference internal" href="../../programming/modules/"><span class="doc">Working with modules</span></a>.</p></li>
+<li><p><strong>View Form</strong> - use this button to invoke the
+<a class="reference internal" href="view_form_dialog/"><span class="doc">View Form Dialog</span></a>
+to set how the view form will be displayed.</p></li>
+<li><p><strong>Edit Form</strong> - use this button to invoke the
+<a class="reference internal" href="edit_form_dialog/"><span class="doc">Edit Form Dialog</span></a>
+to set how the edit form will be displayed.</p></li>
+<li><p><strong>Filters</strong> - use this button to invoke the
+<a class="reference internal" href="filters_dialog/"><span class="doc">Filters Dialog</span></a>
+to create, modify and delete item filters. See
+<a class="reference internal" href="../../programming/data/filters/"><span class="doc">Filters</span></a>.</p></li>
+<li><p><strong>Details</strong> - use this button to invoke the
+<a class="reference internal" href="details_dialog/"><span class="doc">Details Dialog</span></a>
+to add or remove details linked to the item.</p></li>
+<li><p><strong>Order</strong> - use this button to invoke the
+<a class="reference internal" href="order_dialog/"><span class="doc">Order Dialog</span></a>
+to specify how records will be ordered by default. See
+<a class="reference internal" href="../../refs/client/item/m_open/"><span class="doc">open</span></a>
+method</p></li>
+<li><p><strong>Indices</strong> - сlick this button to open the
+<a class="reference internal" href="indices_dialog/"><span class="doc">Indices Dialog</span></a>
+to create and delete indices for the item database table.</p></li>
+<li><p><strong>Foreign keys</strong> - сlick this button to open the
+<a class="reference internal" href="foreign_keys_dialog/"><span class="doc">Foreign Keys Dialog</span></a>
+to create foreign keys for the database table.</p></li>
+<li><p><strong>Reports</strong> - сlick this button to open the
+<a class="reference internal" href="reports_dialog/"><span class="doc">Reports Dialog</span></a>
+to specify reports that could printed for the item.
+A new project has a function that can be used to create a drop-up
+button to print the reports.</p></li>
+<li><p><strong>Privileges</strong> - click this button to open a dialog to configure the
+privileges assigned to user roles for this item.</p></li>
+</ul>
+<img alt="Task node" class="align-center" src="../../_images/items.png" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="item_editor_dialog/">Item Editor Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="field_editor_dialog/">Field Editor Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edit_form_dialog/">Edit Form Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view_form_dialog/">View Form Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters_dialog/">Filters Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="details_dialog/">Details Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="order_dialog/">Order Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indices_dialog/">Indices Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foreign_keys_dialog/">Foreign Keys Dialog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_dialog/">Reports Dialog</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../groups/table_group_editor/" class="btn btn-neutral float-left" title="Detail Group Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="item_editor_dialog/" class="btn btn-neutral float-right" title="Item Editor Dialog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

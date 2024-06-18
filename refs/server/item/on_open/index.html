@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>on_open &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/refs/server/item/on_open.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../search/" />
+    <link rel="next" title="Detail class" href="../../detail_api/" />
+    <link rel="prev" title="on_apply" href="../on_apply/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../admin/">Business application builder</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../">Jam.py class reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../client/">Client side (javascript) class reference</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../">Server side (python) class reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../app_api/">App class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abstractitem_api/">AbstractItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../task_api/">Task class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../item_group_api/">Group class</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../item_api/">Item class</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../item_api/#Item"><code class="docutils literal notranslate"><span class="pre">Item</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../item_api/#attributes-and-properties">Attributes and properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../item_api/#mehods">Mehods</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../item_api/#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../detail_api/">Detail class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../report_group_api/">Reports class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../report_api/">Report class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../field_api/">Field class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../filter_api/">Filter class</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../">Jam.py class reference</a> &raquo;</li>
+          <li><a href="../../">Server side (python) class reference</a> &raquo;</li>
+          <li><a href="../../item_api/">Item class</a> &raquo;</li>
+      <li>on_open</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="on-open">
+<h1>on_open<a class="headerlink" href="#on-open" title="Permalink to this heading">¶</a></h1>
+<p>on_open(item, params)</p>
+<p><strong>domain</strong>: server</p>
+<p><strong>language</strong>: python</p>
+<p><strong>class</strong> <a class="reference internal" href="../../item_api/"><span class="doc">Item class</span></a></p>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>Write <code class="docutils literal notranslate"><span class="pre">on_open</span></code> event handler when you need to override the standard
+procedure of fetching the records from the dataset during the execution of the
+open method on the
+<a class="reference internal" href="../../../client/item/m_open/"><span class="doc">client</span></a>
+or
+<a class="reference internal" href="../m_open/"><span class="doc">server</span></a>.</p>
+<p>See
+<a class="reference internal" href="../../../../programming/server/on_open_events/"><span class="doc">on_open_events</span></a>
+to understand how on_open events are triggered.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">on_open</span></code> event handler has the following parameters:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">item</span></code> - reference to the item,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code> - dictionary containing parameters passed to the server by the open
+method:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__expanded</span></code> - corresponds to the <code class="docutils literal notranslate"><span class="pre">expanded</span></code> parameter of the server
+<a class="reference internal" href="../m_open/"><span class="doc">open</span></a> method / <code class="docutils literal notranslate"><span class="pre">expanded</span></code> attribute of options parameter of
+the client
+<a class="reference internal" href="../../../client/item/m_open/"><span class="doc">open</span></a>
+method</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__fields</span></code> - list of field names</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__filters</span></code> - list of items, each of which is a list with the following members:</p>
+<ul>
+<li><p>field name</p></li>
+<li><p>filter constant from <a class="reference internal" href="../../../../programming/data/filtering_records/"><span class="doc">Filtering records</span></a></p></li>
+<li><p>filter value</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__funcs</span></code> - functions dictionary</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__order</span></code> - list of items, each of which is a list with the following members:</p>
+<ul>
+<li><p>field name</p></li>
+<li><p>boolen value, if it is true the order is descending</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__offset</span></code> - corresponds to the offset parameter of the open method</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__limit</span></code> - corresponds to the limit parameter of the open method</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__client_request</span></code> - is true when request came from the client</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">params</span></code> can also include user defined parameters passed to the open method.</p>
+</li>
+</ul>
+<p>Below is an example of params that the client open methods of invoices items
+sends to the server:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;__fields&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;deleted&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;customer&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;firstname&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;date&#39;</span><span class="p">,</span>
+        <span class="sa">u</span><span class="s1">&#39;subtotal&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;taxrate&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;tax&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;total&#39;</span><span class="p">,</span>
+        <span class="sa">u</span><span class="s1">&#39;billing_address&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;billing_city&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;billing_country&#39;</span><span class="p">,</span>
+        <span class="sa">u</span><span class="s1">&#39;billing_postal_code&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;billing_state&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;__filters&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="sa">u</span><span class="s1">&#39;customer&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="p">[</span><span class="mi">6</span><span class="p">]]],</span>
+    <span class="s1">&#39;__expanded&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;__limit&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="s1">&#39;__offset&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;__order&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="sa">u</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+    <span class="s1">&#39;__fields&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;__funcs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;count&#39;</span><span class="p">},</span>
+    <span class="s1">&#39;__filters&#39;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s1">&#39;__expanded&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;__offset&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;__order&#39;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s1">&#39;__summary&#39;</span><span class="p">:</span> <span class="kc">True</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The server application generates an SQL query, based on params and executes them.</p>
+<p>The server returns to the client the resulting records and the error message if
+it occurs during the execution.</p>
+<p><a class="reference internal" href="../../../../how_to/how_to_multitenancy/"><span class="doc">Here is an example how server events can be used</span></a></p>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../../programming/server/on_open_events/"><span class="doc">on_open_events</span></a></p>
+<p><a class="reference internal" href="../../../../programming/server/"><span class="doc">Server side programming</span></a></p>
+<p><a class="reference internal" href="../../../../programming/data/dataset/"><span class="doc">Dataset</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../on_apply/" class="btn btn-neutral float-left" title="on_apply" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../detail_api/" class="btn btn-neutral float-right" title="Detail class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Export/import metadata &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/project/metadata_file.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Roles" href="../../roles/" />
+    <link rel="prev" title="Print" href="../print/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Business application builder</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../sanitizing/">Sanitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accept_string/">Accept string</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Project management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../parameters/">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/">Database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/">Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import/">Import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../find/">Find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../print/">Print</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Export/import metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#export-metadata">Export metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-metadata">Import metadata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../roles/">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../users/">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code_editor/">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../task/">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../groups/">Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../items/">Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../details/">Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lookup_lists/">Lookup List Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration_with_existing_database/">Intergation with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../saving_history/">Saving audit trail/change history made by users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../record_locking/">Record locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_support/">Language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_translation/">Language translation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Business application builder</a> &raquo;</li>
+          <li><a href="../">Project management</a> &raquo;</li>
+      <li>Export/import metadata</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="export-import-metadata">
+<h1>Export/import metadata<a class="headerlink" href="#export-import-metadata" title="Permalink to this heading">¶</a></h1>
+<p>All the code, parameters and data structure information of the project is stored
+in the <em>admin.sqlite</em> SQLite database located in the project folder. This
+information we call the metadata.</p>
+<section id="export-metadata">
+<h2>Export metadata<a class="headerlink" href="#export-metadata" title="Permalink to this heading">¶</a></h2>
+<p>The project metadata can be exported to a zip file in the Application Builder
+by clicking the <a class="reference internal" href="../export/"><span class="doc">Export</span></a> button.</p>
+<p>This file contains the following information:</p>
+<ul class="simple">
+<li><p>Information about project data structure (information about DB tables, fields,
+indexes defined in the project items), code and settings that is stored in
+the <em>admin.sqlite</em> database.</p></li>
+<li><p>Files from the following folders:</p>
+<ul>
+<li><p>css</p></li>
+<li><p>js</p></li>
+<li><p>static/css</p></li>
+<li><p>static/js</p></li>
+<li><p>static/img</p></li>
+<li><p>reports (<em>ods</em> files of project report templates)</p></li>
+<li><p>utils (this folder may contain python libraries or files used in the project)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="import-metadata">
+<h2>Import metadata<a class="headerlink" href="#import-metadata" title="Permalink to this heading">¶</a></h2>
+<p>The metadata file can be imported to another project.</p>
+<p>The web application while importing the metadata performs the following operations:</p>
+<ol class="arabic simple">
+<li><p>sets the under_maintenance flag so that incoming requests are not processed
+by the application. When receiving the response to theses requests the client
+application shows the message “Web site currently under maintenance”.
+Web applications that run in parallel processes upon
+receiving requests check whether the under_maintenance flag is set and,
+if so, also do not process requests.</p></li>
+<li><p>unzips the metadata file to the temporary folder in the project directory</p></li>
+<li><p>checks the data integrity - items with the same
+<a class="reference internal" href="../../../refs/server/abstr_item/at_id/"><span class="doc">ID</span></a> in the current project and imported
+metadata must have the same type and the same
+<a class="reference internal" href="../../../refs/server/item/at_table_name/"><span class="doc">table_name</span></a>
+attribute if one is specified for an item</p></li>
+<li><p>analyzes the metadata to generate sql queries to update the project
+database structure and records of the <em>admin.sqlite</em> database.</p></li>
+<li><p>if the <strong>Import delay</strong> attribute in the project
+<a class="reference internal" href="../parameters/"><span class="doc">Parameters</span></a>
+is set, waits the number of seconds set in the attribute,
+otherwise waits for 5 minutes or until all previous request to the server
+will be processed.</p></li>
+<li><p>updates the project database and modifies the records of the <em>admin.sqlite</em>,
+see <a class="reference internal" href="#bellow">bellow</a></p></li>
+<li><p>copies files from the temporary folder to the project folder</p></li>
+<li><p>reloads the task tree</p></li>
+<li><p>writes the import log file to the logs folder and sends the import log to
+the Application builder to be displayed</p></li>
+<li><p>deletes the temporary folder</p></li>
+<li><p>removes the under_maintenance flag</p></li>
+<li><p>increases the build flag, so web applications that run in parallel
+processes and monitor this flag reload their task tree</p></li>
+</ol>
+<section id="updating-project-databases">
+<span id="bellow"></span><h3>Updating project databases<a class="headerlink" href="#updating-project-databases" title="Permalink to this heading">¶</a></h3>
+<p>The way the the project database is updated depends on the type of the
+project database.</p>
+<ul class="simple">
+<li><p>Updating databases that support DDL statement rollback (<strong>Postgress</strong>, <strong>Firebird</strong>, <strong>MSSQL</strong>)</p>
+<ul>
+<li><p>creates the connection to the project database</p></li>
+<li><p>starts to execute sql statements to update the project database.</p></li>
+<li><p>if an error occurs while updating the project database, rollbacks the changes,
+and goes to the step 9.</p></li>
+<li><p>after the project database has been updated, makes a copy of the <em>admin.sqlite</em>
+file and starts modifying the <em>admin.sqlite</em> database</p></li>
+<li><p>if an error occurs while modifying the records of <em>admin.sqlite</em>, restores
+<em>admin.sqlite</em> from the copy, rollbacks the changes to the project database
+and goes to the step 9.</p></li>
+<li><p>commits the changes, deletes the copy of the <em>admin.sqlite</em>, closes
+connection and goes to the step 7.</p></li>
+</ul>
+</li>
+<li><p>Updating databases that do not support DDL statement rollback (<strong>MySql</strong>, <strong>Oracle</strong>)</p>
+<ul>
+<li><p>creates the connection to the project database</p></li>
+<li><p>starts to execute sql statements to update the project database.</p></li>
+<li><p>if an error occurs while updating the project database writes error
+to the import log and continues until all statements will be processed</p></li>
+<li><p>commits the changes</p></li>
+<li><p>starts modifying the <em>admin.sqlite</em> database</p></li>
+<li><p>closes connection and goes to the step 7.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="causes-of-errors">
+<h3>Causes of errors<a class="headerlink" href="#causes-of-errors" title="Permalink to this heading">¶</a></h3>
+<p>Due to the fact that all items and fields of Jam.py projects have a unique ID
+attribute, Jam.py very accurately generates sql queries to modify the project
+database.</p>
+<p>While generating sql queries the application currently compares only metadata
+in the current and imported project. The errors can occur when the application,
+for example, tries to adds to a table a field that doesn’t exist in the current
+project metadata but exists in the database table, you created this field
+outside of Application Builder. This situations can be corrected using Manual
+mode in Application Builder, see <a class="reference internal" href="../database/"><span class="doc">Database</span></a>,
+and changing the database.</p>
+<p>If you won’t change tables, field and indexes of production database, there will
+be no problems. Carry out development on the development project and then import
+its metadata into production.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the databases that do not support DDL statement rollback (MySql, Oracle)
+we recommend that you make a backup of the project database
+and <em>admin.sqlite</em> before performing the import.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <strong>SQLite</strong> database, Jam.py doesn’t support importing of metadata into an
+existing project (project with tables in the database).
+You can only import metadata into a new project.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../print/" class="btn btn-neutral float-left" title="Print" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../roles/" class="btn btn-neutral float-right" title="Roles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

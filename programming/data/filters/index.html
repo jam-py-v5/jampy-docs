@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filters &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/programming/data/filters.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Details" href="../details/" />
+    <link rel="prev" title="Filtering records" href="../filtering_records/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Jam.py programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../task_tree/">Task tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflow/">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modules/">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interface/">Client side programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Data programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../dataset/">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../navigating_datasets/">Navigating datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modifying_datasets/">Modifying datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fields/">Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_fields/">Common fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_fields/">Lookup fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filtering_records/">Filtering records</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Filters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../details/">Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reports/">Programming reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Jam.py programming</a> &raquo;</li>
+          <li><a href="../">Data programming</a> &raquo;</li>
+      <li>Filters</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="filters">
+<h1>Filters<a class="headerlink" href="#filters" title="Permalink to this heading">¶</a></h1>
+<p>For each item that have access to a database table a list of filter objects can
+be created.</p>
+<p>To create filters use
+an <a class="reference internal" href="../../../admin/items/filters_dialog/"><span class="doc">Filters Dialog</span></a> of the Application builder.</p>
+<p>Filters provide a convenient way for users to visually specify parameters of the
+request made by the application to the project database</p>
+<p>Each filter has the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">owner</span></code> – an item that owners this filter,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter_name</span></code> — the name of the filter that can be used in programming code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter_caption</span></code> - the name of the filter used in the visual representation
+in the client application,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter_type</span></code> — type of the filter, see
+<a class="reference internal" href="../filtering_records/"><span class="doc">Filtering records</span></a>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">visible</span></code> — if the value of this attribute is <code class="docutils literal notranslate"><span class="pre">true</span></code>, a visual
+representation of this filter will be created by the
+<a class="reference internal" href="../../../refs/client/item/m_create_filter_inputs/"><span class="doc">create_filter_inputs</span></a>
+method, when a <code class="docutils literal notranslate"><span class="pre">filters</span></code> option is not specified,</p></li>
+<li><p>value — a value of the filter,</p></li>
+</ul>
+<p>All filters of the item are attributes of the <code class="docutils literal notranslate"><span class="pre">filters</span></code> of its object.
+By using <code class="docutils literal notranslate"><span class="pre">filter_name</span></code> we can get access to the filter object:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">invoices</span><span class="p">.</span><span class="nx">filters</span><span class="p">.</span><span class="nx">invoicedate1</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Another way to get access to the filter is to use
+<a class="reference internal" href="../../../refs/client/item/m_filter_by_name/"><span class="doc">filter_by_name</span></a>
+method:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">invoices</span><span class="p">.</span><span class="nx">filter_by_name</span><span class="p">(</span><span class="s1">&#39;invoicedate&#39;</span><span class="p">).</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference internal" href="../dataset/"><span class="doc">Dataset</span></a></p>
+<p><a class="reference internal" href="../filtering_records/"><span class="doc">Filtering records</span></a></p>
+<section id="client">
+<h3>Client<a class="headerlink" href="#client" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference internal" href="../../../refs/client/item/at_filters/"><span class="doc">filters</span></a></p>
+<p><a class="reference internal" href="../../../refs/client/filter_api/"><span class="doc">Filter class</span></a></p>
+<p><a class="reference internal" href="../../../refs/client/item/m_assign_filters/"><span class="doc">assign_filters</span></a></p>
+<p><a class="reference internal" href="../../../refs/client/item/m_clear_filters/"><span class="doc">clear_filters</span></a></p>
+<p><a class="reference internal" href="../../../refs/client/item/m_each_filter/"><span class="doc">each_filter</span></a></p>
+<p><a class="reference internal" href="../../../refs/client/item/m_filter_by_name/"><span class="doc">filter_by_name</span></a></p>
+</section>
+<section id="server">
+<h3>Server<a class="headerlink" href="#server" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference internal" href="../../../refs/server/item/at_filters/"><span class="doc">filters</span></a></p>
+<p><a class="reference internal" href="../../../refs/server/filter_api/"><span class="doc">Filter class</span></a></p>
+<p><a class="reference internal" href="../../../refs/server/item/m_clear_filters/"><span class="doc">clear_filters</span></a></p>
+<p><a class="reference internal" href="../../../refs/server/item/m_filter_by_name/"><span class="doc">filter_by_name</span></a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../filtering_records/" class="btn btn-neutral float-left" title="Filtering records" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../details/" class="btn btn-neutral float-right" title="Details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

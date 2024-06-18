@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lookup fields &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/intro/tutorial01/lookup_fields.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Lookup lists" href="../lookup_list/" />
+    <link rel="prev" title="New catalog" href="../new_catalog/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Getting started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../install/">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_project/">Creating a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demo_project/">Demo project</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Tutorial. Part 1. First project</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../new_project/">New project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../new_catalog/">New catalog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lookup fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lookup_list/">Lookup lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../customizing_forms/">Customizing Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indexes/">Indexes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/">Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial02/">Tutorial. Part 2. File and image fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial03/">Tutorial. Part 3. Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Getting started</a> &raquo;</li>
+          <li><a href="../">Tutorial. Part 1. First project</a> &raquo;</li>
+      <li>Lookup fields</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lookup-fields">
+<h1>Lookup fields<a class="headerlink" href="#lookup-fields" title="Permalink to this heading">¶</a></h1>
+<p>Now, we will create the “Contacts” journal and use lookup fields to connect contacts to customers. Lookup fields allow an element of one item (i.e., catalog or journal) to reference an element from an other item.</p>
+<p>Select the “Journals” group in the project task tree, and add a new journal in the
+same way that we created the “Customers” catalog. Journals, like catalogs, correspond to different tables in the database. See this <a class="reference internal" href="../../../faq/faq_catalogs_vs_journals/"><span class="doc">link</span></a> for more information.</p>
+<p>First, add a “Contact date” field of the <code class="docutils literal notranslate"><span class="pre">DATETIME</span></code> type,
+and a “Notes” field of the <code class="docutils literal notranslate"><span class="pre">TEXT</span></code> type.</p>
+<p>Then, add the
+<a class="reference internal" href="../../../programming/data/lookup_fields/"><span class="doc">lookup field</span></a>
+“Customer”, which will store a reference to a record in the “Customers” catalog.</p>
+<img alt="Adding Customer field" class="align-center" src="../../../_images/contacs_cutomer_fld.png" />
+<p>To create a lookup field, first specify its caption and name, and leave the type
+empty. Then go to the <strong>Lookup</strong> tab and click the button to the right of the <strong>Lookup item</strong> input.</p>
+<img alt="Cutomer lookup tab" class="align-center" src="../../../_images/cutomers_lookup_tab.png" />
+<p>This brings up a list of items. Double click the “Customer” record to select it.</p>
+<img alt="Selecting Customer lookup item" class="align-center" src="../../../_images/cutomers_lookup_item.png" />
+<p>Next, we need to specify a lookup field. This is how the customer will be located.
+Here we choose “Lastname”. Leave the other fields empty and press <strong>OK</strong>.</p>
+<img alt="Lastname lookup field" class="align-center" src="../../../_images/lastname_lookup.png" />
+<p>Repeat this procedure to add the “Firstname” and “Phone” lookup fields.
+For these fields, we specify the “Customer” field as their <strong>Master field</strong> attribute.
+This connects them to the first “Lastname” lookup field we created, so that all three
+lookup fields refer to the same customer.</p>
+<img alt="contacts_firstname.png" class="align-center" src="../../../_images/contacts_firstname.png" />
+<img alt="Phone lookup field" class="align-center" src="../../../_images/phone_lookup.png" />
+<p>Click the <strong>OK</strong> button to save the “Contacts” item.</p>
+<img alt="Contacts sql" class="align-center" src="../../../_images/contacts_sql.png" />
+<p>As you can see, there are no “FIRSTNAME” and “PHONE” fields in the <code class="docutils literal notranslate"><span class="pre">CRM_CONTACTS</span></code>
+table. This is due to the fact that we have set <strong>Master field</strong> attribute of these
+fields to “Customer”. The “Customer” field will store a reference to a record in the
+“Customers” catalog, and this record will have the “Firstname” and “Phone” fields.</p>
+<p>Refresh the project page and, in the “Contacts” page, click the <strong>New</strong> button.
+You will see that there is a small button to the right of the “Customer” input.</p>
+<img alt="Customer input" class="align-center" src="../../../_images/customer_input.png" />
+<p>Click on it and select a record in the “Customers” catalog: the
+fields “Customer”, “Firstname” and “Phone” will be filled automatically.</p>
+<img alt="Customer input selected" class="align-center" src="../../../_images/customer_input_selected.png" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../new_catalog/" class="btn btn-neutral float-left" title="New catalog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../lookup_list/" class="btn btn-neutral float-right" title="Lookup lists" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

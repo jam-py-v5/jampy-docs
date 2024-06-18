@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Editor Dialog &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/items/field_editor_dialog.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Edit Form Dialog" href="../edit_form_dialog/" />
+    <link rel="prev" title="Item Editor Dialog" href="../item_editor_dialog/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents/" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Jam.py documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/">How to</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">Business application builder</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../sanitizing/">Sanitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accept_string/">Accept string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../project/">Project management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../roles/">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../users/">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code_editor/">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../task/">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../groups/">Groups</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../">Items</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../item_editor_dialog/">Item Editor Dialog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Field Editor Dialog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#field-tab">Field tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lookup-tab">Lookup tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interface-tab">Interface tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interface-tab-for-file-field">Interface tab for FILE field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interface-tab-for-image-field">Interface tab for Image field</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../edit_form_dialog/">Edit Form Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../view_form_dialog/">View Form Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters_dialog/">Filters Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../details_dialog/">Details Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../order_dialog/">Order Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indices_dialog/">Indices Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foreign_keys_dialog/">Foreign Keys Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reports_dialog/">Reports Dialog</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../details/">Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lookup_lists/">Lookup List Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration_with_existing_database/">Intergation with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../saving_history/">Saving audit trail/change history made by users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../record_locking/">Record locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_support/">Language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../language_translation/">Language translation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../refs/">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents/">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../">Business application builder</a> &raquo;</li>
+          <li><a href="../">Items</a> &raquo;</li>
+      <li>Field Editor Dialog</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="field-editor-dialog">
+<h1>Field Editor Dialog<a class="headerlink" href="#field-editor-dialog" title="Permalink to this heading">¶</a></h1>
+<p>Use the <strong>Field Editor Dialog</strong> to create a new or modify an existing field.</p>
+<p>It has two tabs <strong>Field</strong>, <strong>Lookup</strong> and <strong>Interface</strong>.</p>
+<section id="field-tab">
+<h2>Field tab<a class="headerlink" href="#field-tab" title="Permalink to this heading">¶</a></h2>
+<img alt="fields_editr_field.png" class="align-center" src="../../../_images/fields_editr_field.png" />
+<p>The <strong>Field</strong> tab have the following fields:</p>
+<ul class="simple">
+<li><p><strong>Caption</strong> - the field name that appears to users.</p></li>
+<li><p><strong>Name</strong> - the name of the field that will be used in programming code to
+get access to the field object. It should be a valid python identifier.</p></li>
+<li><p><strong>Type</strong> - type of the field — one of the following values:</p>
+<ul>
+<li><p><strong>TEXT</strong></p></li>
+<li><p><strong>INTEGER</strong></p></li>
+<li><p><strong>FLOAT</strong></p></li>
+<li><p><strong>CURRENCY</strong></p></li>
+<li><p><strong>DATE</strong></p></li>
+<li><p><strong>DATETIME</strong></p></li>
+<li><p><strong>BOOLEAN</strong></p></li>
+<li><p><strong>LONGTEXT</strong></p></li>
+<li><p><strong>FILE</strong></p></li>
+<li><p><strong>IMAGE</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Size</strong> - the size of the field for text fields.</p></li>
+<li><p><strong>Default value</strong> - the default value of the field, for boolean fields use
+0 or 1</p></li>
+<li><p><strong>Required</strong> - if this checkbox is checked, the post method will raise an
+exception if this field is empty. See
+<a class="reference internal" href="../../../programming/data/modifying_datasets/"><span class="doc">Modifying datasets</span></a>.</p></li>
+<li><p><strong>Read only</strong> - this checkbox is checked, the field value can not be changed
+in the interface controls created by the
+<a class="reference internal" href="../../../refs/client/item/m_create_inputs/"><span class="doc">create_inputs</span></a>
+method on the client.</p></li>
+</ul>
+</section>
+<section id="lookup-tab">
+<h2>Lookup tab<a class="headerlink" href="#lookup-tab" title="Permalink to this heading">¶</a></h2>
+<img alt="fields_editr_lookup.png" class="align-center" src="../../../_images/fields_editr_lookup.png" />
+<ul class="simple">
+<li><p><strong>Lookup item</strong> - the lookup item for
+<a class="reference internal" href="../../../programming/data/lookup_fields/"><span class="doc">Lookup fields</span></a></p></li>
+<li><p><strong>Lookup field</strong> - the lookup field for
+<a class="reference internal" href="../../../programming/data/lookup_fields/"><span class="doc">Lookup fields</span></a></p></li>
+<li><p><strong>Lookup field 2</strong> - the lookup field 2 for
+<a class="reference internal" href="../../../programming/data/lookup_fields/"><span class="doc">Lookup fields</span></a></p></li>
+<li><p><strong>Lookup field 3</strong> - the lookup field 3 for
+<a class="reference internal" href="../../../programming/data/lookup_fields/"><span class="doc">Lookup fields</span></a></p></li>
+<li><p><strong>Master field</strong> - the master field for
+<a class="reference internal" href="../../../programming/data/lookup_fields/"><span class="doc">Lookup fields</span></a></p></li>
+<li><p><strong>Typeahead</strong> - if this checkbox is checked, typeahead is enabled for the
+lookup field</p></li>
+<li><p><strong>Lookup value list</strong> - use it to specify a
+<a class="reference internal" href="../../lookup_lists/"><span class="doc">lookup list</span></a>
+for an integer field</p></li>
+</ul>
+</section>
+<section id="interface-tab">
+<h2>Interface tab<a class="headerlink" href="#interface-tab" title="Permalink to this heading">¶</a></h2>
+<img alt="fields_editr_interface.png" class="align-center" src="../../../_images/fields_editr_interface.png" />
+<ul class="simple">
+<li><p><strong>Mask</strong> - use this attribute to specify the
+<a class="reference internal" href="../../../refs/client/field/at_field_mask/"><span class="doc">field_mask</span></a></p></li>
+<li><p><strong>TextArea</strong> - for text fields if this attribute is set the textarea element
+will be created for these fields in the <a class="reference internal" href="../edit_form_dialog/"><span class="doc">Edit Form Dialog</span></a></p></li>
+<li><p><strong>Do not sanitize</strong> - set this attribute to prevent default sanitizing of the
+field value, see <a class="reference internal" href="../../sanitizing/"><span class="doc">Sanitizing</span></a></p></li>
+<li><p><strong>Alignment</strong> - determines the alignment of text in the controls that display
+this field.</p></li>
+<li><p><strong>Placeholder</strong> - use this attribute to specify the placeholder that will be
+displayed by the field input.</p></li>
+<li><p><strong>Help</strong> - if any text / html-message is specified, a question mark will be
+displayed to the right of the input, so when the user moves the mouse pointer
+over this mark, a pop-up window appears displaying this message.</p></li>
+</ul>
+</section>
+<section id="interface-tab-for-file-field">
+<h2>Interface tab for FILE field<a class="headerlink" href="#interface-tab-for-file-field" title="Permalink to this heading">¶</a></h2>
+<img alt="fields_editr_file_interface.png" class="align-center" src="../../../_images/fields_editr_file_interface.png" />
+<img alt="file_btns.png" class="align-center" src="../../../_images/file_btns.png" />
+<ul class="simple">
+<li><p><strong>Download btn</strong> - uncheck the box to hide the download button (middle)</p></li>
+<li><p><strong>Open btn</strong> - uncheck the box to hide the open button (right)</p></li>
+<li><p><strong>Accept</strong> - the attribute specifies the types of files that can be loaded.
+This is an <a class="reference internal" href="../../accept_string/"><span class="doc">Accept string</span></a>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that <strong>Accept</strong> attribute is required.
+Uploaded files are checked on the server against this attribute.</p>
+</div>
+</section>
+<section id="interface-tab-for-image-field">
+<h2>Interface tab for Image field<a class="headerlink" href="#interface-tab-for-image-field" title="Permalink to this heading">¶</a></h2>
+<img alt="fields_editr_image_interface.png" class="align-center" src="../../../_images/fields_editr_image_interface.png" />
+<ul class="simple">
+<li><p><strong>View width</strong> - specifies the width of an image in pixels when it is displayed
+in the table of the view form. If it not specified the width is auto</p></li>
+<li><p><strong>View height</strong> - specifies the height of an image in pixels when it is displayed
+in the table of the view form. If it not specified the height is auto</p></li>
+<li><p><strong>Edit width</strong>  - specifies the width of an image in pixels when it is displayed
+in the edit form. If it not specified the width is auto</p></li>
+<li><p><strong>Edit height</strong>  - specifies the heigth of an image in pixels when it is displayed
+in the edit form. If it not specified the heigth is auto</p></li>
+<li><p><strong>Capture from camera</strong> - if this checkbox is set, the user will be able to
+capture image from camera.</p></li>
+<li><p><strong>Placeholder image</strong> - double-click the image to set the placeholder image,
+that will be displayed when field image is not set.
+Hold Ctrl key and double-click the image to clear the placeholder image.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../item_editor_dialog/" class="btn btn-neutral float-left" title="Item Editor Dialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../edit_form_dialog/" class="btn btn-neutral float-right" title="Edit Form Dialog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Jun 18, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
