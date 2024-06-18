@@ -1,9 +1,9 @@
+name: GitHub Pages
 
 on:
   push:
     branches:
-name: GitHub Pages
-      - master
+      - main
   pull_request:
 
 jobs:
