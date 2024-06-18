@@ -19,7 +19,7 @@ If you want your language translation to be included to Jam.py package,
 export it to a file and send it me, Andrew Yushev (or contact the package maintainer on GitHub).
 
 Please note that Jam.py is constantly evolving and by submitting your translation 
-you agree to make the necessary changes in the future. If you don't mind 
+you might need to make the necessary changes in the future. If you don't mind 
 you will be included to the contributors list.
 
 .. note::
