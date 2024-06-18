@@ -13,10 +13,10 @@ folder in the package.
   new version of the package, you will use the translation database of this package 
   where **there will be no changes made by you**.
   
-  **Please, export you translation to a file!!!**
+  **Please, export your translation to a file!!!**
 
 If you want your language translation to be included to Jam.py package,
-export it to a file and send it me, Andrew Yushev. 
+export it to a file and send it me, Andrew Yushev (or contact package maintainer on GitHub).
 
 Please note that Jam.py is constantly evolving and by submitting your translation 
 you agree to make the necessary changes in the future. If you don't mind 
