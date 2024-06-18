@@ -37,16 +37,15 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
+        run: python3 -m pip install -r ./requirements.txt
 
       - name: Install dependencies
-        run: python3 -m pip install -r ./requirements.txt
 
       - name: Building documentation
         run: |
-          pip install dist/*.whl
           pip install sphinx Pallets-Sphinx-Themes
           sphinx-apidoc --no-toc --module-first -o docs/autodoc src/stenotype
-          sphinx-build docs public -b dirhtml
+          sphinx-build . public -b dirhtml
           touch ./public/.nojekyll
 
       - name: github pages deploy
