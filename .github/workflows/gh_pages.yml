@@ -1,8 +1,8 @@
-name: GitHub Pages
 
 on:
   push:
     branches:
+name: GitHub Pages
       - master
   pull_request:
 
@@ -50,7 +50,7 @@ jobs:
           touch ./public/.nojekyll
 
       - name: github pages deploy
-        uses: peaceiris/actions-gh-pages@v2.3.1
+        uses: peaceiris/actions-gh-pages@v4
         env:
           PERSONAL_TOKEN: ${{ secrets.PAT }}
           PUBLISH_BRANCH: gh-pages
