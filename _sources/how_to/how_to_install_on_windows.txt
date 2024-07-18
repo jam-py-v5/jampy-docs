@@ -158,7 +158,9 @@ Invoking installation::
 
     ...\> wsl --install
 
-  The output might be similar to the following::
+
+
+The output might be similar to the following::
 
     ...\> Installing: Virtual Machine Platform
         Virtual Machine Platform has been installed.
@@ -169,4 +171,4 @@ Invoking installation::
         The requested operation is successful. Changes will not be effective until the system is rebooted.
 
 
-Now, we have full development environment with Ubuntu, and we can proceed with Jam.py installation as usual for Linux.
+Now, we have a development environment with Ubuntu, and we can proceed with Jam.py installation as usual for Linux.
