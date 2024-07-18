@@ -162,7 +162,7 @@ Invoking installation::
 
 The output might be similar to the following::
 
-    ...\> Installing: Virtual Machine Platform
+        Installing: Virtual Machine Platform
         Virtual Machine Platform has been installed.
         Installing: Windows Subsystem for Linux
         Windows Subsystem for Linux has been installed.
