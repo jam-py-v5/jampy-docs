@@ -68,7 +68,8 @@ This is the recommended way to install Jam.py.
    
     pip install jam.py 
 
-    Or, for a fork:
+
+    Or, for a forked Jam.py:
 
    .. code-block:: console
    
