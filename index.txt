@@ -2,6 +2,26 @@
 Jam.py documentation
 ====================
 
+Introduction
+=============
+
+
+Welcome to Jam.py! If you are new to Jam.py or no-code, low-code or more-code Web application development, this is the place to find some tips about the Jam.py. 
+
+.. admonition:: Objectives
+
+    Installing Python and Jam.py, choosing the database and the Web server and making Application Design decisions.
+
+.. admonition:: Audience
+
+    Web development enthusiasts or developers, with a limited or no experience with the Web development, or deployment.
+
+.. admonition:: Prerequisites
+
+    Some Python and JavaScript knowledge is recommended. The general knowledge about the Command Line prompt, and typing
+    the commands is required.
+
+
 How the documentation is organized
 ==================================
 
