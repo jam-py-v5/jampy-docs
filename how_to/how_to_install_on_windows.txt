@@ -81,6 +81,12 @@ the following command::
 
     ...\> py -m pip install jam.py
 
+
+For a forked Jam.py with the latest patches, use:: 
+   
+    ...\> py -m pip install jam.py-v5
+
+
 This will download and install the latest Jam.py release.
 
 After the installation has completed, you can verify your Jam.py installation
