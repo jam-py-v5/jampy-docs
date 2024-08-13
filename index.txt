@@ -52,7 +52,7 @@ Or visit the
 
 `Jam.py Application Design Tips`_.
 
-.. _`Jam.py Application Design Tips`: https://jampyapplicationbuilder.com/tips/
+.. _`Jam.py Application Design Tips`: https://jampy-application-design-tips.readthedocs.io/
 
 
 To download this document as a single PDF, please visit:
