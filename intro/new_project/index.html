@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creating a project &mdash; Jam.py  documentation</title>
+  <title>How to install Jam.py on Windows &mdash; Jam.py  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -48,7 +48,16 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../">Getting started</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../install/">Installation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating a project</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to install Jam.py on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-python">Install Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-pip">About <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-a-virtual-environment">Setting up a virtual environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-jam-py">Install Jam.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-new-project">Create a new project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-pitfalls">Common pitfalls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-wls">Installing WLS</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../demo_project/">Demo project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial01/">Tutorial. Part 1. First project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial02/">Tutorial. Part 2. File and image fields</a></li>
@@ -79,7 +88,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../contents/" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../">Getting started</a> &raquo;</li>
-      <li>Creating a project</li>
+      <li>How to install Jam.py on Windows</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -88,94 +97,166 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="creating-a-project">
-<h1>Creating a project<a class="headerlink" href="#creating-a-project" title="Permalink to this heading">¶</a></h1>
+  <section id="how-to-install-jam-py-on-windows">
+<h1>How to install Jam.py on Windows<a class="headerlink" href="#how-to-install-jam-py-on-windows" title="Permalink to this heading">¶</a></h1>
+<div class="admonition-adapted-from-django-docs admonition">
+<p class="admonition-title">Adapted from <a class="reference external" href="https://docs.djangoproject.com/">Django Docs</a></p>
+<p>The below document is adopted from <a class="reference external" href="https://docs.djangoproject.com/">Django Docs</a>.</p>
+</div>
+<p>This document will guide you through installing Python 3.x and Jam.py on
+Windows. It also provides instructions for setting up a virtual environment,
+which makes it easier to work on Python projects. This is meant as a beginner’s
+guide for users working on Jam.py projects and does not reflect how Jam.py
+should be installed when developing patches for Jam.py itself.</p>
+<p>The steps in this guide have been tested with Windows 10. In other
+versions, the steps would be similar. You will need to be familiar with using
+the Windows command prompt.</p>
+<section id="install-python">
+<h2>Install Python<a class="headerlink" href="#install-python" title="Permalink to this heading">¶</a></h2>
+<p>Jam.py is a Python web framework, thus requiring Python to be installed on your
+machine. At the time of writing, Python 3.8 is the latest version.</p>
+<p>To install Python on your machine go to <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>. The
+website should offer you a download button for the latest Python version.
+Download the executable installer and run it. Check the boxes next to “Install
+launcher for all users (recommended)” then click “Install Now”.</p>
+<p>After installation, open the command prompt and check that the Python version
+matches the version you installed by executing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+</section>
+<section id="about-pip">
+<h2>About <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#about-pip" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://pypi.org/project/pip/">pip</a> is a package manager for Python and is included by default with the
+Python installer. It helps to install and uninstall Python packages
+(such as Jam.py!). For the rest of the installation, we’ll use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to
+install Python packages from the command line.</p>
+</section>
+<section id="setting-up-a-virtual-environment">
+<span id="virtualenvironment"></span><h2>Setting up a virtual environment<a class="headerlink" href="#setting-up-a-virtual-environment" title="Permalink to this heading">¶</a></h2>
+<p>It is best practice to provide a dedicated environment for each Jam.py project
+you create. There are many options to manage environments and packages within
+the Python ecosystem, some of which are recommended in the <a class="reference external" href="https://packaging.python.org/guides/tool-recommendations/">Python
+documentation</a>.</p>
+<p>To create a virtual environment for your project, open a new command prompt,
+navigate to the folder where you want to create your project and then enter the
+following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">project</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>This will create a folder called ‘project-name’ if it does not already exist
+and set up the virtual environment. To activate the environment, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">project</span><span class="o">-</span><span class="n">name</span>\<span class="n">Scripts</span>\<span class="n">activate</span><span class="o">.</span><span class="n">bat</span>
+</pre></div>
+</div>
+<p>The virtual environment will be activated and you’ll see “(project-name)” next
+to the command prompt to designate that. Each time you start a new command
+prompt, you’ll need to activate the environment again.</p>
+</section>
+<section id="install-jam-py">
+<h2>Install Jam.py<a class="headerlink" href="#install-jam-py" title="Permalink to this heading">¶</a></h2>
+<p>Jam.py can be installed easily using <code class="docutils literal notranslate"><span class="pre">pip</span></code> within your virtual environment.</p>
+<p>In the command prompt, ensure your virtual environment is active, and execute
+the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jam</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>For a forked Jam.py with the latest patches, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jam</span><span class="o">.</span><span class="n">py</span><span class="o">-</span><span class="n">v5</span>
+</pre></div>
+</div>
+<p>This will download and install the latest Jam.py release.</p>
+<p>After the installation has completed, you can verify your Jam.py installation
+by executing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> in the command prompt.</p>
+</section>
+<section id="create-a-new-project">
+<h2>Create a new project<a class="headerlink" href="#create-a-new-project" title="Permalink to this heading">¶</a></h2>
 <p>Create a new directory.</p>
 <p>Go into the directory and run from command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>jam-project.py
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span><span class="n">python</span>  <span class="o">..</span>\<span class="n">project</span><span class="o">-</span><span class="n">name</span>\<span class="n">Scripts</span>\<span class="n">jam</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>The following files and folders will be created in the directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span>
-    <span class="n">css</span><span class="o">/</span>
-    <span class="n">js</span><span class="o">/</span>
-    <span class="n">img</span><span class="o">/</span>
-    <span class="n">reports</span><span class="o">/</span>
-    <span class="n">static</span><span class="o">/</span>
-    <span class="n">admin</span><span class="o">.</span><span class="n">sqlite</span>
-    <span class="n">server</span><span class="o">.</span><span class="n">py</span>
-    <span class="n">index</span><span class="o">.</span><span class="n">html</span>
-    <span class="n">wsgi</span><span class="o">.</span><span class="n">py</span>
+<p>To start the Jam.py web server run <code class="docutils literal notranslate"><span class="pre">server.py</span></code> script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span><span class="n">python</span>  <span class="n">server</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>To start the Jam.py web server run <code class="docutils literal notranslate"><span class="pre">server.py</span></code> script.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./server.py
+<p>Click “Allow” for public and private networks to access this app.</p>
+</section>
+<section id="common-pitfalls">
+<h2>Common pitfalls<a class="headerlink" href="#common-pitfalls" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p>If you are connecting to the internet behind a proxy, there might be problems
+in running the command <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Jam.py</span></code>. Set the environment
+variables for proxy configuration in the command prompt as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="nb">set</span> <span class="n">http_proxy</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">username</span><span class="p">:</span><span class="n">password</span><span class="nd">@proxyserver</span><span class="p">:</span><span class="n">proxyport</span>
+<span class="o">...</span>\<span class="o">&gt;</span> <span class="nb">set</span> <span class="n">https_proxy</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">username</span><span class="p">:</span><span class="n">password</span><span class="nd">@proxyserver</span><span class="p">:</span><span class="n">proxyport</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can specify a port as parameter, for example</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./server.py<span class="w"> </span><span class="m">8081</span>
+</li>
+<li><p>If your Administrator prohibited setting up a virtual environment, it
+is still possible to install Jam.py as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jam</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>By default, the port is 8080. If you specify another port, you need to
-use it in your browser in the next steps.</p>
-</div>
-<p>Open a Web browser and go to “/builder.html” on your local domain – e.g.:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">127.0.0.1:8080/builder.html</span>
+<p>For a forked Jam.py with the latest patches, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jam</span><span class="o">.</span><span class="n">py</span><span class="o">-</span><span class="n">v5</span>
 </pre></div>
 </div>
-<p>You should see the language selection dialog. This defines the language used for the
-user interface. You can select the language from the list of default languages, or
-import your own, using the “folder” icon to the right of the input field. See the
-<a class="reference internal" href="../../admin/language_support/"><span class="doc">Language support</span></a> page for more information.
-Select your language and press the OK button.</p>
-<img alt="Jam.py language dialog" src="../../_images/lang.png" />
-<p>In the New project dialog box fill in:</p>
-<ul class="simple">
-<li><p><strong>Caption</strong> - the project name that will appear to users.</p></li>
-<li><p><strong>Name</strong> - the name of project (task) that will be used in the code (Python or JS)
-to get access to the task object. This should be a short and valid python identifier.
-This name is also used as a prefix when creating a table in the project database.</p></li>
-<li><p><strong>DB type</strong> - select a database type. If the database is not Sqlite, it must be
-created in advance and its attributes should be entered in the
-corresponding form fields.
-To see examples of Database setup, follow the <a class="reference internal" href="../../admin/project/database/"><span class="doc">link</span></a>.</p></li>
+<p>This will download and install the latest Jam.py release.</p>
+<p>After the installation has completed, you can verify your Jam.py installation
+by executing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> in the command prompt.</p>
+<p>However, running <code class="docutils literal notranslate"><span class="pre">jam-project.py</span></code> will fail since it is not in the path. Check
+the installation folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">site</span> <span class="o">--</span><span class="n">user</span><span class="o">-</span><span class="n">site</span>
+</pre></div>
+</div>
+<p>The output might be similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">youruser</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Packages</span>\<span class="n">PythonSoftwareFoundation</span><span class="o">.</span><span class="n">Python</span><span class="mf">.3.9</span><span class="n">_qbz5n2kfra8p0</span>\<span class="n">LocalCache</span>\<span class="n">local</span><span class="o">-</span><span class="n">packages</span>\<span class="n">Python39</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> at the end of above line with <code class="docutils literal notranslate"><span class="pre">Scripts</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="nb">dir</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">youruser</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Packages</span>\<span class="n">PythonSoftwareFoundation</span><span class="o">.</span><span class="n">Python</span><span class="mf">.3.9</span><span class="n">_qbz5n2kfra8p0</span>\<span class="n">LocalCache</span>\<span class="n">local</span><span class="o">-</span><span class="n">packages</span>\<span class="n">Python39</span>\<span class="n">Scripts</span>
+</pre></div>
+</div>
+<p>The output might be similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">Directory</span> <span class="n">of</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">yourser</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Packages</span>\<span class="n">PythonSoftwareFoundation</span><span class="o">.</span><span class="n">Python</span><span class="mf">.3.9</span><span class="n">_qbz5n2kfra8p0</span>\<span class="n">LocalCache</span>\<span class="n">local</span><span class="o">-</span><span class="n">packages</span>\<span class="n">Python39</span>\<span class="n">Scripts</span>
+
+    <span class="mi">13</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">2023</span>  <span class="mi">02</span><span class="p">:</span><span class="mi">59</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">.</span>
+    <span class="mi">13</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">2023</span>  <span class="mi">02</span><span class="p">:</span><span class="mi">59</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">..</span>
+    <span class="mi">13</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">2023</span>  <span class="mi">02</span><span class="p">:</span><span class="mi">59</span> <span class="n">PM</span>             <span class="mi">1</span><span class="p">,</span><span class="mi">087</span> <span class="n">jam</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">py</span>
+                   <span class="mi">1</span> <span class="n">File</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>          <span class="mi">1</span><span class="p">,</span><span class="mi">087</span> <span class="nb">bytes</span>
+                   <span class="mi">2</span> <span class="n">Dir</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="mi">177</span><span class="p">,</span><span class="mi">027</span><span class="p">,</span><span class="mi">321</span><span class="p">,</span><span class="mi">856</span> <span class="nb">bytes</span> <span class="n">free</span>
+</pre></div>
+</div>
+<p>Create the new folder somewhere and run <code class="docutils literal notranslate"><span class="pre">jam-project</span></code> from from it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">youruser</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Packages</span>\<span class="n">PythonSoftwareFoundation</span><span class="o">.</span><span class="n">Python</span><span class="mf">.3.9</span><span class="n">_qbz5n2kfra8p0</span>\<span class="n">LocalCache</span>\<span class="n">local</span><span class="o">-</span><span class="n">packages</span>\<span class="n">Python39</span>\<span class="n">Scripts</span>\<span class="n">jam</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Run the new project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">python</span> <span class="n">server</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
 </ul>
-<img alt="New project setup" class="align-center" src="../../_images/project_params.png" />
-<p>When you press OK, the connection to the database will be checked, and in case
-of failure      an error message will be displayed.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Please note the following requirements:</p>
-<ul class="simple">
-<li><p>To use a <strong>FireBird</strong> database, the python <code class="docutils literal notranslate"><span class="pre">fdb</span></code> library must be installed.</p></li>
-<li><p><strong>PostgreSQL</strong> requires the <code class="docutils literal notranslate"><span class="pre">psycopg2</span></code> library.</p></li>
-<li><p><strong>MySQL</strong> requires the  <code class="docutils literal notranslate"><span class="pre">MySQLdb</span></code> for Python 2.x or <code class="docutils literal notranslate"><span class="pre">mysqlclient</span></code>  for Python 3.x.</p></li>
-<li><p><strong>Oracle</strong> requires the <code class="docutils literal notranslate"><span class="pre">cx_Oracle</span></code> library.</p></li>
-<li><p><strong>MSSQL</strong> requires the <code class="docutils literal notranslate"><span class="pre">pymssql</span></code> library.</p></li>
-<li><p>To generate reports, <strong>LibreOffice</strong> must be installed.</p></li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For a <strong>SQLite</strong> database, when an item field is deleted or renamed, or foreign
-key is created,
-<a class="reference internal" href="../../admin/"><span class="doc">Application builder</span></a>,
-creates a new table and copies records from the old one into it.</p>
-<p>For <strong>SQLite</strong> database, Jam.py doesn’t support importing of metadata into an
-existing project (project with tables in the database).
-You can only import metadata into a new project.</p>
-</div>
-<p>If all goes well, a new project will be created and the project tree will appear
-in the Application builder.</p>
-<img alt="Jam.py Application builder" class="align-center" src="../../_images/adm_new_project.png" />
-<p>Now, to see the project itself, create a new page in the browser and type in the
-address bar:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">127.0.0.1:8080</span>
+</section>
+<section id="installing-wls">
+<h2>Installing WLS<a class="headerlink" href="#installing-wls" title="Permalink to this heading">¶</a></h2>
+<p>Invoking installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span>
 </pre></div>
 </div>
-<img alt="Jam.py project" class="align-center" src="../../_images/empty_project.png" />
+<p>The output might be similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Installing</span><span class="p">:</span> <span class="n">Virtual</span> <span class="n">Machine</span> <span class="n">Platform</span>
+<span class="n">Virtual</span> <span class="n">Machine</span> <span class="n">Platform</span> <span class="n">has</span> <span class="n">been</span> <span class="n">installed</span><span class="o">.</span>
+<span class="n">Installing</span><span class="p">:</span> <span class="n">Windows</span> <span class="n">Subsystem</span> <span class="k">for</span> <span class="n">Linux</span>
+<span class="n">Windows</span> <span class="n">Subsystem</span> <span class="k">for</span> <span class="n">Linux</span> <span class="n">has</span> <span class="n">been</span> <span class="n">installed</span><span class="o">.</span>
+<span class="n">Installing</span><span class="p">:</span> <span class="n">Ubuntu</span>
+<span class="n">Ubuntu</span> <span class="n">has</span> <span class="n">been</span> <span class="n">installed</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">requested</span> <span class="n">operation</span> <span class="ow">is</span> <span class="n">successful</span><span class="o">.</span> <span class="n">Changes</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">effective</span> <span class="n">until</span> <span class="n">the</span> <span class="n">system</span> <span class="ow">is</span> <span class="n">rebooted</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Now, we have a development environment with Ubuntu, and we can proceed with Jam.py installation as usual for Linux.</p>
+</section>
 </section>
 
 
@@ -190,7 +271,7 @@ address bar:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Aug 07, 2024.
+      <span class="lastupdated">Last updated on Aug 13, 2024.
       </span></p>
   </div>
 
