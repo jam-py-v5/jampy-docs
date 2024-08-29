@@ -33,7 +33,7 @@ launcher for all users (recommended)" then click "Install Now".
 After installation, open the command prompt and check that the Python version
 matches the version you installed by executing::
 
-    ...\> py --version
+    ...\> python --version
 
 
 About ``pip``
@@ -60,7 +60,7 @@ To create a virtual environment for your project, open a new command prompt,
 navigate to the folder where you want to create your project and then enter the
 following::
 
-    ...\> py -m venv project-name
+    ...\> python -m venv project-name
 
 This will create a folder called 'project-name' if it does not already exist
 and set up the virtual environment. To activate the environment, run::
@@ -79,12 +79,12 @@ Jam.py can be installed easily using ``pip`` within your virtual environment.
 In the command prompt, ensure your virtual environment is active, and execute
 the following command::
 
-    ...\> py -m pip install jam.py
+    ...\> python -m pip install jam.py
 
 
 For a forked Jam.py with the latest patches, use:: 
    
-    ...\> py -m pip install jam.py-v5
+    ...\> python -m pip install jam.py-v5
 
 
 This will download and install the latest Jam.py release.
