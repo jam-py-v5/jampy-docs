@@ -9,7 +9,7 @@ We plan to add the following features to Jam.py:
   mobile devices.
 * Language support stage 2: internalization, support for multiple languages in 
   the project.
-* Support for Bootstrap 4.  
+* Support for Bootstrap 5.  
 * Support for mobile devices.  
 * Development of report wizards, simplifying report creation
 * Rework of import/export utility: visual interface, control over merging of changes.
@@ -22,7 +22,7 @@ The notes from a current Jam.py maintainer D. Babic:
 
 Q: Since Andrew decided to leave this project due to the health reasons, the question is how will the roadmap reflect on the project?
 
-A: This is a good question. Andrew invested a lot of time and effort in Jam.py, and it has been great. My huge thanks for that. I would say the Jam.py v5 is very stable, production ready, and there will be minimal effort in the core code maintenance. The v7 on the other hand already reflected some of the above roadmap points, mainly BS4 and mobile devices. Which was a fantastic effort again by Andrew. The idea of report wizards was great, basically to eliminate the LibreOffice Calc dependency. The question here is how many users actually utilize the true power of reports? Not quite sure how many. Hence, for now, the LibreOffice will stay as is.
+A: This is a good question. Andrew invested a lot of time and effort in Jam.py, and it has been great. My huge thanks for that. I would say the Jam.py v5 is very stable, production ready, and there will be minimal effort in the core code maintenance. The v7 on the other hand already reflected some of the above roadmap points, mainly BS5 and mobile devices. Which was a fantastic effort again by Andrew. The idea of report wizards was great, basically to eliminate the LibreOffice Calc dependency. The question here is how many users actually utilize the true power of reports? Not quite sure how many. Hence, for now, the LibreOffice will stay as is.
 
 Q: Would there be new Jam.py v5 releases at all?
 
