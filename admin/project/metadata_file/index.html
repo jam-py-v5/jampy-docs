@@ -1,25 +1,26 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Export/import metadata &mdash; Jam.py  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/project/metadata_file.html" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+
   
-        <script src="../../../_static/jquery.js?v=a354a556"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
-        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://jampyapplicationbuilder.com/docs/admin/project/metadata_file.html" />
+      <script src="../../../_static/jquery.js?v=a354a556"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=df4b10f6"></script>
+      <script src="../../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
@@ -32,11 +33,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../contents/" class="icon icon-home"> Jam.py
+
+          
+          
+          <a href="../../../contents/" class="icon icon-home">
+            Jam.py
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -99,10 +104,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../contents/" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../">Business application builder</a> &raquo;</li>
-          <li><a href="../">Project management</a> &raquo;</li>
-      <li>Export/import metadata</li>
+      <li><a href="../../../contents/" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../">Business application builder</a></li>
+          <li class="breadcrumb-item"><a href="../">Project management</a></li>
+      <li class="breadcrumb-item active">Export/import metadata</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -112,12 +117,12 @@
            <div itemprop="articleBody">
              
   <section id="export-import-metadata">
-<h1>Export/import metadata<a class="headerlink" href="#export-import-metadata" title="Permalink to this heading">¶</a></h1>
+<h1>Export/import metadata<a class="headerlink" href="#export-import-metadata" title="Permalink to this heading"></a></h1>
 <p>All the code, parameters and data structure information of the project is stored
 in the <em>admin.sqlite</em> SQLite database located in the project folder. This
 information we call the metadata.</p>
 <section id="export-metadata">
-<h2>Export metadata<a class="headerlink" href="#export-metadata" title="Permalink to this heading">¶</a></h2>
+<h2>Export metadata<a class="headerlink" href="#export-metadata" title="Permalink to this heading"></a></h2>
 <p>The project metadata can be exported to a zip file in the Application Builder
 by clicking the <a class="reference internal" href="../export/"><span class="doc">Export</span></a> button.</p>
 <p>This file contains the following information:</p>
@@ -139,7 +144,7 @@ the <em>admin.sqlite</em> database.</p></li>
 </ul>
 </section>
 <section id="import-metadata">
-<h2>Import metadata<a class="headerlink" href="#import-metadata" title="Permalink to this heading">¶</a></h2>
+<h2>Import metadata<a class="headerlink" href="#import-metadata" title="Permalink to this heading"></a></h2>
 <p>The metadata file can be imported to another project.</p>
 <p>The web application while importing the metadata performs the following operations:</p>
 <ol class="arabic simple">
@@ -174,7 +179,7 @@ the Application builder to be displayed</p></li>
 processes and monitor this flag reload their task tree</p></li>
 </ol>
 <section id="updating-project-databases">
-<span id="bellow"></span><h3>Updating project databases<a class="headerlink" href="#updating-project-databases" title="Permalink to this heading">¶</a></h3>
+<span id="bellow"></span><h3>Updating project databases<a class="headerlink" href="#updating-project-databases" title="Permalink to this heading"></a></h3>
 <p>The way the the project database is updated depends on the type of the
 project database.</p>
 <ul class="simple">
@@ -207,7 +212,7 @@ to the import log and continues until all statements will be processed</p></li>
 </ul>
 </section>
 <section id="causes-of-errors">
-<h3>Causes of errors<a class="headerlink" href="#causes-of-errors" title="Permalink to this heading">¶</a></h3>
+<h3>Causes of errors<a class="headerlink" href="#causes-of-errors" title="Permalink to this heading"></a></h3>
 <p>Due to the fact that all items and fields of Jam.py projects have a unique ID
 attribute, Jam.py very accurately generates sql queries to modify the project
 database.</p>
@@ -278,13 +283,7 @@ You can only import metadata into a new project.</p>
       gtag('config', 'UA-122962025-6', {
           'anonymize_ip': false,
       });
-    </script>  
-
-  <style>
-         .wy-nav-content { max-width: none; }
-  </style>
-
-
+    </script> 
 
 </body>
 </html>
