@@ -207,7 +207,7 @@ that shows “Yes No Cancel” disalog won’t be executed.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">on_field_changed</span></code> event handler will check if old password is correct.
 It and the <code class="docutils literal notranslate"><span class="pre">change_password</span></code> function send requests to the server to execute
 functions defined in the item server module:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">change_password</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">old_password</span><span class="p">,</span> <span class="n">new_password</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">change_password</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">old_password</span><span class="p">,</span> <span class="n">new_password</span><span class="p">):</span>
     <span class="n">user_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;user_info&#39;</span><span class="p">][</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
     <span class="n">users</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">handlers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">users</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">user_id</span><span class="p">)</span>
@@ -222,7 +222,7 @@ functions defined in the item server module:</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
 
-<span class="k">def</span> <span class="nf">check_old_password</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">old_password</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_old_password</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">old_password</span><span class="p">):</span>
     <span class="n">user_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;user_info&#39;</span><span class="p">][</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
     <span class="n">users</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">handlers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">users</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">user_id</span><span class="p">)</span>
@@ -250,7 +250,7 @@ functions defined in the item server module:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

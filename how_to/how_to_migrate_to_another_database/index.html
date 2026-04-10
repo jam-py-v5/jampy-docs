@@ -125,9 +125,9 @@ database structures in the Postgress database.</p></li>
 <a class="reference internal" href="../../refs/server/task/m_copy_database/"><span class="doc">copy_database</span></a> method of the task:</p>
 <ul>
 <li><p>within the ProjectTask create the following Server Module function (adjust the below database path with correct one):</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jam.db.db_modules</span> <span class="kn">import</span> <span class="n">SQLITE</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">jam.db.db_modules</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLITE</span>
 
-<span class="k">def</span> <span class="nf">copy_db</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">copy_db</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
     <span class="n">task</span><span class="o">.</span><span class="n">copy_database</span><span class="p">(</span><span class="n">SQLITE</span><span class="p">,</span> <span class="s1">&#39;/home/work/demo/demo.sqlite&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -136,12 +136,12 @@ database structures in the Postgress database.</p></li>
 <ul>
 <li><p>call this function in the
 <a class="reference internal" href="../../refs/server/task/on_created/"><span class="doc">on_created</span></a> event handler:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jam.db.db_modules</span> <span class="kn">import</span> <span class="n">SQLITE</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">jam.db.db_modules</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLITE</span>
 
-<span class="k">def</span> <span class="nf">copy_db</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">copy_db</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
     <span class="n">task</span><span class="o">.</span><span class="n">copy_database</span><span class="p">(</span><span class="n">SQLITE</span><span class="p">,</span> <span class="s1">&#39;/home/work/demo/demo.sqlite&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">on_created</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_created</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
   <span class="n">copy_db</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -186,7 +186,7 @@ keys.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

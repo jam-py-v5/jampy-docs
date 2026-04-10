@@ -217,9 +217,9 @@ See
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>In this example the parameters of the request are a dictionary:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
-<span class="k">def</span> <span class="nf">get_sales</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_sales</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="n">date1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
     <span class="n">date2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
     <span class="n">invoices</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -232,9 +232,9 @@ See
 </pre></div>
 </div>
 <p>Below the parameters are passed as a keyworded list:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
-<span class="k">def</span> <span class="nf">get_sales</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_sales</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="n">date1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
     <span class="n">date2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
     <span class="n">invoices</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -248,9 +248,9 @@ See
 </div>
 <p>The same result can be achieved by using set_fields, set_where, set_order_by
 methods:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
-<span class="k">def</span> <span class="nf">get_sales</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_sales</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="n">date1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
     <span class="n">date2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
     <span class="n">invoices</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -261,7 +261,7 @@ methods:</p>
     <span class="n">invoices</span><span class="o">.</span><span class="n">open</span><span class="p">();</span>
 </pre></div>
 </div>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 </pre></div>
 </div>
 <dl>
@@ -274,7 +274,7 @@ invoices.set_order_by([‘customer’, ‘date’]);
 invoices.open();</p>
 </dd>
 </dl>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_sales</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_sales</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">sales</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
     <span class="n">sales</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;customer&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">],</span>
@@ -306,7 +306,7 @@ invoices.open();</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

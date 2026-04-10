@@ -205,7 +205,7 @@ are triggered:</p>
 </pre></div>
 </div>
 <p>on the server:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_customers</span><span class="p">(</span><span class="n">customers</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_customers</span><span class="p">(</span><span class="n">customers</span><span class="p">):</span>
     <span class="n">customers</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">customers</span><span class="o">.</span><span class="n">eof</span><span class="p">():</span>
         <span class="nb">print</span> <span class="n">customers</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">customers</span><span class="o">.</span><span class="n">lastname</span><span class="o">.</span><span class="n">value</span>
@@ -229,7 +229,7 @@ be used to navigate a dataset:</p>
 </pre></div>
 </div>
 <p>On the server we can iterate dataset rows the following way:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_customers</span><span class="p">(</span><span class="n">customers</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_customers</span><span class="p">(</span><span class="n">customers</span><span class="p">):</span>
     <span class="n">customers</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">customers</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">rec_no</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
@@ -254,7 +254,7 @@ be used to navigate a dataset:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

@@ -131,20 +131,20 @@ method on the client does or as keyworded arguments</p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p>The result of the execution of following code snippets wil be the same:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
 <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
 <span class="n">item</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;customer&#39;</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="s1">&#39;invoicedate__gt&#39;</span><span class="p">:</span> <span class="n">date</span><span class="p">})</span>
 </pre></div>
 </div>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
 <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
 <span class="n">item</span><span class="o">.</span><span class="n">set_where</span><span class="p">({</span><span class="s1">&#39;customer&#39;</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="s1">&#39;invoicedate__gt&#39;</span><span class="p">:</span> <span class="n">date</span><span class="p">})</span>
 <span class="n">item</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
 <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">365</span><span class="p">)</span>
 <span class="n">item</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="n">customer</span><span class="o">=</span><span class="mi">44</span><span class="p">,</span> <span class="n">invoicedate__gt</span><span class="o">=</span><span class="n">date</span><span class="p">)</span>
@@ -171,7 +171,7 @@ method on the client does or as keyworded arguments</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

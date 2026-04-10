@@ -147,10 +147,10 @@ corresponding functions when you click on them:</p>
 In this module we use the Python csv module. We do not export system fields -
 primary key field and deletion flag field.</p>
 <p>Below is the code for Python 3:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
-<span class="k">def</span> <span class="nf">export_scv</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">export_scv</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="n">copy</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">copy</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
     <span class="n">file_name</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">item_name</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span>
@@ -170,7 +170,7 @@ primary key field and deletion flag field.</p>
             <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">file_name</span>
 
-<span class="k">def</span> <span class="nf">import_scv</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">import_scv</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
     <span class="n">copy</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">work_dir</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">,</span> <span class="s1">&#39;files&#39;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
@@ -187,10 +187,10 @@ primary key field and deletion flag field.</p>
 </pre></div>
 </div>
 <p>For Python 2, this code looks like this:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
-<span class="k">def</span> <span class="nf">export_scv2</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">export_scv2</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="n">copy</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">copy</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
     <span class="n">file_name</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">item_name</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span>
@@ -210,7 +210,7 @@ primary key field and deletion flag field.</p>
             <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">file_name</span>
 
-<span class="k">def</span> <span class="nf">import_scv2</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">import_scv2</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
     <span class="n">copy</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">work_dir</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">,</span> <span class="s1">&#39;files&#39;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
@@ -241,7 +241,7 @@ primary key field and deletion flag field.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

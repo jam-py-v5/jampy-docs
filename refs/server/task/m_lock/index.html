@@ -130,7 +130,7 @@ Timeout exception is raised.</p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p>The code</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="n">lock</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="s1">&#39;calculation&#39;</span><span class="p">):</span>
     <span class="n">lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
     <span class="k">try</span><span class="p">:</span>
@@ -140,15 +140,15 @@ Timeout exception is raised.</p>
 </pre></div>
 </div>
 <p>is equivalent to</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="s1">&#39;calculation&#39;</span><span class="p">):</span>
         <span class="c1">#some code</span>
 </pre></div>
 </div>
 <p>The example with timeout:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jam.third_party.filelock</span> <span class="kn">import</span> <span class="n">Timeout</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">jam.third_party.filelock</span><span class="w"> </span><span class="kn">import</span> <span class="n">Timeout</span>
 
-<span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
   <span class="k">try</span>
     <span class="k">with</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="s1">&#39;calculation&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
         <span class="c1">#some code</span>
@@ -158,7 +158,7 @@ Timeout exception is raised.</p>
 </div>
 <p>In the following example when saving invoice the app calculates sold tracks.
 Before doing this it acquires a lock:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="s1">&#39;invoice_saved&#39;</span><span class="p">):</span>
         <span class="n">tracks_sql</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">delta</span><span class="o">.</span><span class="n">update_deleted</span><span class="p">()</span>
@@ -196,7 +196,7 @@ Before doing this it acquires a lock:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

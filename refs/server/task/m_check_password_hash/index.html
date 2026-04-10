@@ -122,7 +122,7 @@ password value.</p>
 </section>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_login</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">login</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">session_uuid</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_login</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">login</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">session_uuid</span><span class="p">):</span>
   <span class="n">users</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">handlers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
   <span class="n">users</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="n">login</span><span class="o">=</span><span class="n">login</span><span class="p">)</span>
   <span class="n">users</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
@@ -155,7 +155,7 @@ password value.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

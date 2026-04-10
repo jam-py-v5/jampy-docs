@@ -120,13 +120,13 @@ parameters of report conversion.</p>
 </section>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">STDOUT</span><span class="p">,</span> <span class="n">PIPE</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">subprocess</span><span class="w"> </span><span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">STDOUT</span><span class="p">,</span> <span class="n">PIPE</span>
 
-<span class="k">def</span> <span class="nf">on_convert_report</span><span class="p">(</span><span class="n">report</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_convert_report</span><span class="p">(</span><span class="n">report</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;nt&quot;</span><span class="p">:</span>
-            <span class="kn">import</span> <span class="nn">_winreg</span>
+            <span class="kn">import</span><span class="w"> </span><span class="nn">_winreg</span>
             <span class="n">regpath</span> <span class="o">=</span> <span class="s2">&quot;SOFTWARE</span><span class="se">\\</span><span class="s2">Microsoft</span><span class="se">\\</span><span class="s2">Windows</span><span class="se">\\</span><span class="s2">CurrentVersion</span><span class="se">\\</span><span class="s2">App Paths</span><span class="se">\\</span><span class="s2">soffice.exe&quot;</span>
             <span class="n">root</span> <span class="o">=</span> <span class="n">_winreg</span><span class="o">.</span><span class="n">OpenKey</span><span class="p">(</span><span class="n">_winreg</span><span class="o">.</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="p">,</span> <span class="n">regpath</span><span class="p">)</span>
             <span class="n">s_office</span> <span class="o">=</span> <span class="n">_winreg</span><span class="o">.</span><span class="n">QueryValue</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -156,7 +156,7 @@ parameters of report conversion.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

@@ -160,9 +160,9 @@ item’s change log and values of the primary fields of new records.</p>
 <p>You can make some additional processing of the delta. In the following code, the
 a value of the date field is set to the current date before changes are applied
 to the database table.</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
-<span class="k">def</span> <span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">delta</span><span class="p">:</span>
         <span class="n">d</span><span class="o">.</span><span class="n">edit</span><span class="p">()</span>
         <span class="n">d</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -180,7 +180,7 @@ changes.</p>
 <p>In the following code, while saving the changes made to the invoices, the
 application as well updates the value of the <code class="docutils literal notranslate"><span class="pre">tracks_sold</span></code> field for tracks in
 this invoices. All this is done in one transaction.</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
     <span class="n">tracks</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">tracks</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">changes</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">delta</span><span class="o">.</span><span class="n">update_deleted</span><span class="p">()</span>
@@ -209,7 +209,7 @@ this invoices. All this is done in one transaction.</p>
 <p>In the previous examples the <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler returns <code class="docutils literal notranslate"><span class="pre">None</span></code> so after
 that the <code class="docutils literal notranslate"><span class="pre">apply_delta</span></code> method is executed by the application.</p>
 <p>The more general case is:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
 
   <span class="c1"># execute some code before changes are written to the database</span>
 
@@ -241,7 +241,7 @@ that the <code class="docutils literal notranslate"><span class="pre">apply_delt
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

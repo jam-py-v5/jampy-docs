@@ -112,13 +112,13 @@
 <p>You can implement a multi-tenancy using Jam.py.</p>
 <p>For example, if some item have a user_id field, the following code in the
 server module of the item will do the job:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_open</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_open</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">:</span>
         <span class="n">user_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;user_info&#39;</span><span class="p">][</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">user_id</span><span class="p">:</span>
             <span class="n">params</span><span class="p">[</span><span class="s1">&#39;__filters&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">FILTER_EQ</span><span class="p">,</span> <span class="n">user_id</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">:</span>
         <span class="n">user_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;user_info&#39;</span><span class="p">][</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">user_id</span><span class="p">:</span>
@@ -154,14 +154,14 @@ the records.</p>
 <p>You can use a more general approach and add the following code to the server
 module of the task. Then a multi-tenancy will be applied to every item that have
 a user_id field:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_open</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_open</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">field_by_name</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">:</span>
             <span class="n">user_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;user_info&#39;</span><span class="p">][</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
             <span class="k">if</span> <span class="n">user_id</span><span class="p">:</span>
                 <span class="n">params</span><span class="p">[</span><span class="s1">&#39;__filters&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">FILTER_EQ</span><span class="p">,</span> <span class="n">user_id</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">field_by_name</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">:</span>
             <span class="n">user_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;user_info&#39;</span><span class="p">][</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
@@ -193,7 +193,7 @@ a user_id field:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 

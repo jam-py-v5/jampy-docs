@@ -135,14 +135,14 @@ in the <em>/home/username/project_folder</em> directory.</p>
 </ul>
 <p>In the WSGI configuration <a class="reference external" href="file:/var/www/username_pythonanywhere_com_wsgi.py">file:/var/www/username_pythonanywhere_com_wsgi.py</a> file
 add the following code</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/home/username/project_folder&#39;</span>
 <span class="k">if</span> <span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">jam.wsgi</span> <span class="kn">import</span> <span class="n">create_application</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">jam.wsgi</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_application</span>
 <span class="n">application</span> <span class="o">=</span> <span class="n">create_application</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -163,7 +163,7 @@ add the following code</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Oct 14, 2024.
+      <span class="lastupdated">Last updated on Apr 10, 2026.
       </span></p>
   </div>
 
